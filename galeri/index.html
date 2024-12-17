@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth scroll-pt-[6rem]">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Sansita&family=Sancreek&family=Poppins&display=swap" rel="stylesheet" />
+    <title>Galeri Nusantara</title>
+  </head>
+  <body>
+    <div class="h-16 w-full flex items-center bg-white shadow-md top-0 sticky z-50 transition-all duration-300 ease-in-out" id="navbar">
+      <h1 class="font-sancreek absolute ms-10 w-fit text-[#753a00] text-2xl">Samudra & Budaya</h1>
+      <div class="flex mx-auto justify-center items-center w-fit">
+        <div class="flex gap-4">
+          <div class="rounded-lg w-fit py-1 px-2">
+            <a href="../index.html" class="text-[#753a00] font-bold text-lg font-sansation">Beranda</a>
+          </div>
+          <div class="rounded-lg w-fit py-1 px-2">
+            <a href="../index.html#sejarah" class="text-[#753a00] font-bold text-lg font-sansation">Sejarah</a>
+          </div>
+          <div class="rounded-lg w-fit py-1 px-2">
+            <a href="../index.html#budaya" class="text-[#753a00] font-bold text-lg font-sansation">Budaya & Tradisi</a>
+          </div>
+          <div class="rounded-lg w-fit py-1 px-2">
+            <a href="#" class="text-[#753a00] font-bold text-lg font-sansation">Galeri</a>
+          </div>
+          <div class="rounded-lg w-fit py-1 px-2">
+            <a href="../kegiatan nusantara/index.html" class="text-[#753a00] font-bold text-lg font-sansation">Kegiatan Nusantara</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative h-[80vh] mx-8 mt-4 mb-10" id="beranda">
+      <video autoplay loop muted playsinline class="absolute rounded-3xl top-0 left-0 w-full h-full object-cover">
+        <source src="../bg/vid1.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="relative z-10 flex items-center justify-center flex-col h-full">
+        <div class="flex items-center justify-center font-poppins my-8 absolute top-[6vh]">
+          <div class="border-t border-white w-16"></div>
+          <span class="px-4 text-white text-lg">Galeri Keindahan Nusantara</span>
+          <div class="border-t border-white w-16"></div>
+        </div>
+        <div class="font-bold font-sancreek text-8xl flex justify-center text-white mb-[9vh]">
+          <p>Galeri Nusantara</p>
+        </div>
+        <div class="font-poppins text-white mx-60 text-center">
+          <p>
+            Selamat datang di Galeri Nusantara, tempat di mana Anda dapat menjelajahi keindahan alam, budaya, dan tradisi Indonesia melalui kumpulan foto dan video yang menawan. Dari Sabang hingga Merauke, setiap sudut Nusantara memiliki
+            cerita yang unik dan memukau.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative w-[190vh] overflow-hidden mx-8 mb-12">
+      <div class="flex h-full">
+        <!-- Sidebar -->
+        <div class="flex flex-col p-0">
+          <button class="text-black font-semibold text-lg bg-[#e8f1f8] px-4 py-6 rounded-br-lg writing-mode-vertical rotate-180 hover:shadow-inner focus:outline-none" onclick="changeContent('alam')">Alam</button>
+          <button class="text-black font-semibold text-lg px-4 py-6 rounded-r-lg writing-mode-vertical rotate-180 hover:shadow-inner focus:outline-none" onclick="changeContent('tradisi')">Tradisi</button>
+          <button class="text-black font-semibold text-lg px-4 py-6 rounded-r-lg writing-mode-vertical rotate-180 hover:shadow-inner focus:outline-none" onclick="changeContent('kuliner')">Kuliner</button>
+          <button class="text-black font-semibold text-lg px-4 py-6 rounded-tr-lg writing-mode-vertical rotate-180 hover:shadow-inner focus:outline-none" onclick="changeContent('seni')">Seni & Musik</button>
+        </div>
+
+        <!-- Main Content -->
+        <div id="content" class="p-0 w-screen">
+          <!-- "Alam" section -->
+          <div id="alam" class="bg-[#e8f1f8] p-6 rounded-e-lg">
+            <div class="flex items-center">
+              <div class="w-[50vh] h-[60vh] flex-shrink-0">
+                <img src="./alam/raja-ampat.png" alt="" class="w-full h-full rounded-[40px_200px_20px_70px]" />
+              </div>
+              <div class="">
+                <div class="mx-20">
+                  <h1 class="font-poppins font-bold text-2xl text-[#003159]">Raja Ampat, Papua Barat</h1>
+                  <p class="font-poppins text-xl text-[#003159]">Surga bawah laut dengan keanekaragaman hayati laut tertinggi di dunia.</p>
+                  <div class="mt-14">
+                    <a href="./alam/raja-ampat/index.html" class="font-poppins text-[#003159] border border-solid border-[#004dff] rounded-full w-fit px-3 py-1">Jelajahi sekarang</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center justify-end">
+              <div class="">
+                <div class="mx-20 text-end">
+                  <h1 class="font-poppins font-bold text-2xl text-[#003159]">Danau Toba, Sumatera Utara</h1>
+                  <p class="font-poppins text-xl text-[#003159]">Danau vulkanik terbesar di Asia Tenggara, dengan Pulau Samosir di tengahnya.</p>
+                  <div class="mt-14">
+                    <a href="./alam/danau-toba/index.html" class="font-poppins text-[#003159] border border-solid border-[#004dff] rounded-full w-fit px-3 py-1">Jelajahi sekarang</a>
+                  </div>
+                </div>
+              </div>
+              <div class="w-[50vh] h-[60vh] flex-shrink-0">
+                <img src="./alam/toba.png" alt="" class="w-full h-full rounded-[200px_40px_70px_20px]" />
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="w-[50vh] h-[60vh] flex-shrink-0">
+                <img src="./alam/borobudur.png" alt="" class="w-full h-full rounded-[40px_200px_20px_70px]" />
+              </div>
+              <div class="">
+                <div class="mx-20">
+                  <h1 class="font-poppins font-bold text-2xl text-[#003159]">Candi Borobudur, Yogyakarta</h1>
+                  <p class="font-poppins text-xl text-[#003159]">Pusaka Kolosal Magelang</p>
+                  <div class="mt-14">
+                    <a href="./alam/borobudur/index.html" class="font-poppins text-[#003159] border border-solid border-[#004dff] rounded-full w-fit px-3 py-1">Jelajahi sekarang</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center justify-end">
+              <div class="">
+                <div class="mx-20 text-end">
+                  <h1 class="font-poppins font-bold text-2xl text-[#003159]">Mandalika, Nusa Tenggara Barat</h1>
+                  <p class="font-poppins text-xl text-[#003159]">Kepingan surga alam budaya di lombok , NTB.</p>
+                  <div class="mt-14">
+                    <a href="./alam/mandalika/index.html" class="font-poppins text-[#003159] border border-solid border-[#004dff] rounded-full w-fit px-3 py-1">Jelajahi sekarang</a>
+                  </div>
+                </div>
+              </div>
+              <div class="w-[50vh] h-[60vh] flex-shrink-0">
+                <img src="./alam/mandalika.png" alt="" class="w-full h-full rounded-[200px_40px_70px_20px]" />
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="w-[50vh] h-[60vh] flex-shrink-0">
+                <img src="./alam/bali.png" alt="" class="w-full h-full rounded-[40px_200px_20px_70px]" />
+              </div>
+              <div class="">
+                <div class="mx-20">
+                  <h1 class="font-poppins font-bold text-2xl text-[#003159]">Bali, Nusa Tenggara</h1>
+                  <p class="font-poppins text-xl text-[#003159]">Pesona pulau dewata bali</p>
+                  <div class="mt-14">
+                    <a href="./alam/bali/index.html" class="font-poppins text-[#003159] border border-solid border-[#004dff] rounded-full w-fit px-3 py-1">Jelajahi sekarang</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center justify-end">
+              <div class="">
+                <div class="mx-20 text-end">
+                  <h1 class="font-poppins font-bold text-2xl text-[#003159]">Monas, DKI Jakarta</h1>
+                  <p class="font-poppins text-xl text-[#003159]">Monumen nasional terpopuler di indonesia</p>
+                  <div class="mt-14">
+                    <a href="./alam/monas/index.html" class="font-poppins text-[#003159] border border-solid border-[#004dff] rounded-full w-fit px-3 py-1">Jelajahi sekarang</a>
+                  </div>
+                </div>
+              </div>
+              <div class="w-[50vh] h-[60vh] flex-shrink-0">
+                <img src="./alam/monas.png" alt="" class="w-full h-full rounded-[200px_40px_70px_20px]" />
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="w-[50vh] h-[60vh] flex-shrink-0">
+                <img src="./alam/bali.png" alt="" class="w-full h-full rounded-[40px_200px_20px_70px]" />
+              </div>
+              <div class="">
+                <div class="mx-20">
+                  <h1 class="font-poppins font-bold text-2xl text-[#003159]">Likupang, Manado</h1>
+                  <p class="font-poppins text-xl text-[#003159]">Mempersembahkan Keindahan Indonesia yang Tak Tertandingi</p>
+                  <div class="mt-14">
+                    <a href="./alam/likupang/index.html" class="font-poppins text-[#003159] border border-solid border-[#004dff] rounded-full w-fit px-3 py-1">Jelajahi sekarang</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center justify-end">
+              <div class="">
+                <div class="mx-20 text-end">
+                  <h1 class="font-poppins font-bold text-2xl text-[#003159]">Labuan Bajo, NTT</h1>
+                  <p class="font-poppins text-xl text-[#003159]">Sepetak Surga yang Terletak di Indonesia Timur</p>
+                  <div class="mt-14">
+                    <a href="./alam/labua-bajo/index.html" class="font-poppins text-[#003159] border border-solid border-[#004dff] rounded-full w-fit px-3 py-1">Jelajahi sekarang</a>
+                  </div>
+                </div>
+              </div>
+              <div class="w-[50vh] h-[60vh] flex-shrink-0">
+                <img src="./alam/labuan.png" alt="" class="w-full h-full rounded-[200px_40px_70px_20px]" />
+              </div>
+            </div>
+          </div>
+
+          <div id="tradisi" class="hidden bg-[#ffd700] p-6 rounded-e-lg">
+            <div class="flex items-center">
+              <div class="w-[50vh] h-[60vh] flex-shrink-0">
+                <img src="./tradisi/ngaben.png" alt="" class="w-full h-full rounded-[40px_200px_20px_70px]" />
+              </div>
+              <div class="">
+                <div class="mx-20">
+                  <h1 class="font-poppins font-bold text-2xl text-[#003159]">Ngaben, Bali</h1>
+                  <p class="font-poppins text-xl text-[#003159]">Upacara kremasi tradisional Bali sebagai penghormatan terakhir kepada leluhur.</p>
+                  <div class="mt-14">
+                    <a href="./tradisi/ngaben/index.html" class="font-poppins text-[#5C4400] border border-solid border-[#D89E00] rounded-full w-fit px-3 py-1">Jelajahi sekarang</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center justify-end">
+              <div class="">
+                <div class="mx-20 text-end">
+                  <h1 class="font-poppins font-bold text-2xl text-[#003159]">Sekaten, Yogyakarta</h1>
+                  <p class="font-poppins text-xl text-[#003159]">Perayaan tradisional memperingati Maulid Nabi Muhammad SAW.</p>
+                  <div class="mt-14">
+                    <a href="./tradisi/sekaten/index.html" class="font-poppins text-[#5C4400] border border-solid border-[#D89E00] rounded-full w-fit px-3 py-1">Jelajahi sekarang</a>
+                  </div>
+                </div>
+              </div>
+              <div class="w-[50vh] h-[60vh] flex-shrink-0">
+                <img src="./tradisi/sekaten.png" alt="" class="w-full h-full rounded-[200px_40px_70px_20px]" />
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="w-[50vh] h-[60vh] flex-shrink-0">
+                <img src="./tradisi/tabuik.png" alt="" class="w-full h-full rounded-[40px_200px_20px_70px]" />
+              </div>
+              <div class="">
+                <div class="mx-20">
+                  <h1 class="font-poppins font-bold text-2xl text-[#003159]">Tabuik, Sumatera Barat</h1>
+                  <p class="font-poppins text-xl text-[#003159]">Festival budaya yang memperingati kisah perjuangan keluarga Nabi Muhammad SAW.</p>
+                  <div class="mt-14">
+                    <a href="./tradisi/tabuik/index.html" class="font-poppins text-[#5C4400] border border-solid border-[#D89E00] rounded-full w-fit px-3 py-1">Jelajahi sekarang</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center justify-end">
+              <div class="">
+                <div class="mx-20 text-end">
+                  <h1 class="font-poppins font-bold text-2xl text-[#003159]">Pasola, Sumba</h1>
+                  <p class="font-poppins text-xl text-[#003159]">Pertunjukan tradisional adu ketangkasan dengan kuda dan lembing.</p>
+                  <div class="mt-14">
+                    <a href="./tradisi/pasola/index.html" class="font-poppins text-[#5C4400] border border-solid border-[#D89E00] rounded-full w-fit px-3 py-1">Jelajahi sekarang</a>
+                  </div>
+                </div>
+              </div>
+              <div class="w-[50vh] h-[60vh] flex-shrink-0">
+                <img src="./tradisi/pasola.png" alt="" class="w-full h-full rounded-[200px_40px_70px_20px]" />
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="w-[50vh] h-[60vh] flex-shrink-0">
+                <img src="./tradisi/rambu.png" alt="" class="w-full h-full rounded-[40px_200px_20px_70px]" />
+              </div>
+              <div class="">
+                <div class="mx-20">
+                  <h1 class="font-poppins font-bold text-2xl text-[#003159]">Rambu Solo, Toraja</h1>
+                  <p class="font-poppins text-xl text-[#003159]">Upacara pemakaman adat Toraja yang penuh simbol dan makna.</p>
+                  <div class="mt-14">
+                    <a href="./tradisi/rambu-solo/index.html" class="font-poppins text-[#5C4400] border border-solid border-[#D89E00] rounded-full w-fit px-3 py-1">Jelajahi sekarang</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center justify-end">
+              <div class="">
+                <div class="mx-20 text-end">
+                  <h1 class="font-poppins font-bold text-2xl text-[#003159]">Festival Danau Sentani, Papua</h1>
+                  <p class="font-poppins text-xl text-[#003159]">Perayaan budaya dan seni masyarakat Papua di sekitar Danau Sentani.</p>
+                  <div class="mt-14">
+                    <a href="./tradisi/sentani/index.html" class="font-poppins text-[#5C4400] border border-solid border-[#D89E00] rounded-full w-fit px-3 py-1">Jelajahi sekarang</a>
+                  </div>
+                </div>
+              </div>
+              <div class="w-[50vh] h-[60vh] flex-shrink-0">
+                <img src="./tradisi/sentani.png" alt="" class="w-full h-full rounded-[200px_40px_70px_20px]" />
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="w-[50vh] h-[60vh] flex-shrink-0">
+                <img src="./tradisi/tiwah.png" alt="" class="w-full h-full rounded-[40px_200px_20px_70px]" />
+              </div>
+              <div class="">
+                <div class="mx-20">
+                  <h1 class="font-poppins font-bold text-2xl text-[#003159]">Tiwah, Kalimantan Tengah</h1>
+                  <p class="font-poppins text-xl text-[#003159]">Ritual adat Dayak untuk memindahkan tulang leluhur ke Sandung (makam keluarga).</p>
+                  <div class="mt-14">
+                    <a href="./tradisi/tiwah/index.html" class="font-poppins text-[#5C4400] border border-solid border-[#D89E00] rounded-full w-fit px-3 py-1">Jelajahi sekarang</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center justify-end">
+              <div class="">
+                <div class="mx-20 text-end">
+                  <h1 class="font-poppins font-bold text-2xl text-[#003159]">Pacu Jawi, Sumatera Barat</h1>
+                  <p class="font-poppins text-xl text-[#003159]">Lomba balapan sapi tradisional yang unik dan penuh semangat.</p>
+                  <div class="mt-14">
+                    <a href="./tradisi/pacu-jawi/index.html" class="font-poppins text-[#5C4400] border border-solid border-[#D89E00] rounded-full w-fit px-3 py-1">Jelajahi sekarang</a>
+                  </div>
+                </div>
+              </div>
+              <div class="w-[50vh] h-[60vh] flex-shrink-0">
+                <img src="./tradisi/pacu.png" alt="" class="w-full h-full rounded-[200px_40px_70px_20px]" />
+              </div>
+            </div>
+          </div>
+
+          <!-- "Kuliner" section -->
+          <div id="kuliner" class="hidden bg-[#66BB6A66] p-6 rounded-e-lg">
+            <div class="flex items-center">
+              <div class="w-[50vh] h-[60vh] flex-shrink-0">
+                <img src="./kuliner/rendang.png" alt="" class="w-full h-full rounded-[40px_200px_20px_70px]" />
+              </div>
+              <div class="">
+                <div class="mx-20">
+                  <h1 class="font-poppins font-bold text-2xl text-[#003159]">Rendang, Sumatera Barat</h1>
+                  <p class="font-poppins text-xl text-[#003159]">Hidangan daging dengan bumbu kaya rempah, dinobatkan sebagai makanan terenak di dunia.</p>
+                  <div class="mt-14">
+                    <a href="./kuliner/rendang/index.html" class="font-poppins text-[#075900] border border-solid border-[#00FF11] rounded-full w-fit px-3 py-1">Jelajahi sekarang</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center justify-end">
+              <div class="">
+                <div class="mx-20 text-end">
+                  <h1 class="font-poppins font-bold text-2xl text-[#003159]">Papeda, Papua</h1>
+                  <p class="font-poppins text-xl text-[#003159]">Bubur sagu khas Papua yang disajikan dengan kuah ikan berempah.</p>
+                  <div class="mt-14">
+                    <a href="./kuliner/papeda/index.html" class="font-poppins text-[#075900] border border-solid border-[#00FF11] rounded-full w-fit px-3 py-1">Jelajahi sekarang</a>
+                  </div>
+                </div>
+              </div>
+              <div class="w-[50vh] h-[60vh] flex-shrink-0">
+                <img src="./kuliner/papeda.png" alt="" class="w-full h-full rounded-[200px_40px_70px_20px]" />
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="w-[50vh] h-[60vh] flex-shrink-0">
+                <img src="./kuliner/lilit.png" alt="" class="w-full h-full rounded-[40px_200px_20px_70px]" />
+              </div>
+              <div class="">
+                <div class="mx-20">
+                  <h1 class="font-poppins font-bold text-2xl text-[#003159]">Sate Lilit, Bali</h1>
+                  <p class="font-poppins text-xl text-[#003159]">Sate khas Bali berbahan daging cincang yang dililitkan pada batang serai.</p>
+                  <div class="mt-14">
+                    <a href="./kuliner/sate-lilit/index.html" class="font-poppins text-[#075900] border border-solid border-[#00FF11] rounded-full w-fit px-3 py-1">Jelajahi sekarang</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center justify-end">
+              <div class="">
+                <div class="mx-20 text-end">
+                  <h1 class="font-poppins font-bold text-2xl text-[#003159]">Gudeg, Yogyakarta</h1>
+                  <p class="font-poppins text-xl text-[#003159]">Olahan nangka muda manis dengan santan, khas kota Yogyakarta.</p>
+                  <div class="mt-14">
+                    <a href="./kuliner/gudeg/index.html" class="font-poppins text-[#075900] border border-solid border-[#00FF11] rounded-full w-fit px-3 py-1">Jelajahi sekarang</a>
+                  </div>
+                </div>
+              </div>
+              <div class="w-[50vh] h-[60vh] flex-shrink-0">
+                <img src="./kuliner/gudeg.png" alt="" class="w-full h-full rounded-[200px_40px_70px_20px]" />
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="w-[50vh] h-[60vh] flex-shrink-0">
+                <img src="./kuliner/coto.png" alt="" class="w-full h-full rounded-[40px_200px_20px_70px]" />
+              </div>
+              <div class="">
+                <div class="mx-20">
+                  <h1 class="font-poppins font-bold text-2xl text-[#003159]">Coto Makassar, SulSel</h1>
+                  <p class="font-poppins text-xl text-[#003159]">Sup daging khas Makassar dengan kuah yang kaya rempah.</p>
+                  <div class="mt-14">
+                    <a href="./kuliner/coto/index.html" class="font-poppins text-[#075900] border border-solid border-[#00FF11] rounded-full w-fit px-3 py-1">Jelajahi sekarang</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center justify-end">
+              <div class="">
+                <div class="mx-20 text-end">
+                  <h1 class="font-poppins font-bold text-2xl text-[#003159]">Pempek, Palembang</h1>
+                  <p class="font-poppins text-xl text-[#003159]">Makanan berbahan dasar ikan dan sagu, disajikan dengan kuah cuko.</p>
+                  <div class="mt-14">
+                    <a href="./kuliner/pempek/index.html" class="font-poppins text-[#075900] border border-solid border-[#00FF11] rounded-full w-fit px-3 py-1">Jelajahi sekarang</a>
+                  </div>
+                </div>
+              </div>
+              <div class="w-[50vh] h-[60vh] flex-shrink-0">
+                <img src="./kuliner/pempek.png" alt="" class="w-full h-full rounded-[200px_40px_70px_20px]" />
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="w-[50vh] h-[60vh] flex-shrink-0">
+                <img src="./kuliner/taliwang.png" alt="" class="w-full h-full rounded-[40px_200px_20px_70px]" />
+              </div>
+              <div class="">
+                <div class="mx-20">
+                  <h1 class="font-poppins font-bold text-2xl text-[#003159]">Ayam Taliwang, NTB</h1>
+                  <p class="font-poppins text-xl text-[#003159]">Hidangan ayam bakar pedas khas Lombok.</p>
+                  <div class="mt-14">
+                    <a href="./kuliner/taliwang/index.html" class="font-poppins text-[#075900] border border-solid border-[#00FF11] rounded-full w-fit px-3 py-1">Jelajahi sekarang</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center justify-end">
+              <div class="">
+                <div class="mx-20 text-end">
+                  <h1 class="font-poppins font-bold text-2xl text-[#003159]">Kerak Telor, Jakarta</h1>
+                  <p class="font-poppins text-xl text-[#003159]">Makanan tradisional Betawi berbahan beras ketan, telur, dan serundeng.</p>
+                  <div class="mt-14">
+                    <a href="./kuliner/kerak-telor/index.html" class="font-poppins text-[#075900] border border-solid border-[#00FF11] rounded-full w-fit px-3 py-1">Jelajahi sekarang</a>
+                  </div>
+                </div>
+              </div>
+              <div class="w-[50vh] h-[60vh] flex-shrink-0">
+                <img src="./kuliner/kerak.png" alt="" class="w-full h-full rounded-[200px_40px_70px_20px]" />
+              </div>
+            </div>
+          </div>
+
+          <!-- "Seni" section -->
+          <div id="seni" class="hidden bg-[#BB666666] p-6 rounded-e-lg">
+            <div class="flex items-center">
+              <div class="w-[50vh] h-[60vh] flex-shrink-0">
+                <img src="./seni/angklung.png" alt="" class="w-full h-full rounded-[40px_200px_20px_70px]" />
+              </div>
+              <div class="">
+                <div class="mx-20">
+                  <h1 class="font-poppins font-bold text-2xl text-[#003159]">Angklung, Sunda</h1>
+                  <p class="font-poppins text-xl text-[#003159]">Instrumen bambu yang menghasilkan melodi harmonis dengan digoyangkan.</p>
+                  <div class="mt-14">
+                    <a href="./seni/angklung/index.html" class="font-poppins text-[#590000] border border-solid border-[#FF0000] rounded-full w-fit px-3 py-1">Jelajahi sekarang</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center justify-end">
+              <div class="">
+                <div class="mx-20 text-end">
+                  <h1 class="font-poppins font-bold text-2xl text-[#003159]">Gamelan, Jawa</h1>
+                  <p class="font-poppins text-xl text-[#003159]">Ensambel tradisional yang terdiri dari gong, saron, dan kendang.</p>
+                  <div class="mt-14">
+                    <a href="./seni/gamelan-jawa/index.html" class="font-poppins text-[#590000] border border-solid border-[#FF0000] rounded-full w-fit px-3 py-1">Jelajahi sekarang</a>
+                  </div>
+                </div>
+              </div>
+              <div class="w-[50vh] h-[60vh] flex-shrink-0">
+                <img src="./seni/gamelan.png" alt="" class="w-full h-full rounded-[200px_40px_70px_20px]" />
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="w-[50vh] h-[60vh] flex-shrink-0">
+                <img src="./seni/sasando.png" alt="" class="w-full h-full rounded-[40px_200px_20px_70px]" />
+              </div>
+              <div class="">
+                <div class="mx-20">
+                  <h1 class="font-poppins font-bold text-2xl text-[#003159]">Sasando, NTT</h1>
+                  <p class="font-poppins text-xl text-[#003159]">Alat musik petik berbentuk unik dari Rote, menghasilkan suara yang lembut.</p>
+                  <div class="mt-14">
+                    <a href="./seni/sasando/index.html" class="font-poppins text-[#590000] border border-solid border-[#FF0000] rounded-full w-fit px-3 py-1">Jelajahi sekarang</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center justify-end">
+              <div class="">
+                <div class="mx-20 text-end">
+                  <h1 class="font-poppins font-bold text-2xl text-[#003159]">Tifa, Papua dan Maluku</h1>
+                  <p class="font-poppins text-xl text-[#003159]">Alat musik perkusi khas dengan ornamen ukiran budaya setempat.</p>
+                  <div class="mt-14">
+                    <a href="./seni/tifa/index.html" class="font-poppins text-[#590000] border border-solid border-[#FF0000] rounded-full w-fit px-3 py-1">Jelajahi sekarang</a>
+                  </div>
+                </div>
+              </div>
+              <div class="w-[50vh] h-[60vh] flex-shrink-0">
+                <img src="./seni/tifa.png" alt="" class="w-full h-full rounded-[200px_40px_70px_20px]" />
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="w-[50vh] h-[60vh] flex-shrink-0">
+                <img src="./seni/rebab.png" alt="" class="w-full h-full rounded-[40px_200px_20px_70px]" />
+              </div>
+              <div class="">
+                <div class="mx-20">
+                  <h1 class="font-poppins font-bold text-2xl text-[#003159]">Rebab, Jawa</h1>
+                  <p class="font-poppins text-xl text-[#003159]">Alat musik dawai tradisional yang sering dimainkan dalam pertunjukan wayang.</p>
+                  <div class="mt-14">
+                    <a href="./seni/rebab/index.html" class="font-poppins text-[#590000] border border-solid border-[#FF0000] rounded-full w-fit px-3 py-1">Jelajahi sekarang</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center justify-end">
+              <div class="">
+                <div class="mx-20 text-end">
+                  <h1 class="font-poppins font-bold text-2xl text-[#003159]">Kolintang, Minahasa</h1>
+                  <p class="font-poppins text-xl text-[#003159]">Alat musik kayu yang sering digunakan untuk melodi dan harmoni.</p>
+                  <div class="mt-14">
+                    <a href="./seni/kolintang/index.html" class="font-poppins text-[#590000] border border-solid border-[#FF0000] rounded-full w-fit px-3 py-1">Jelajahi sekarang</a>
+                  </div>
+                </div>
+              </div>
+              <div class="w-[50vh] h-[60vh] flex-shrink-0">
+                <img src="./seni/kolintang.png" alt="" class="w-full h-full rounded-[200px_40px_70px_20px]" />
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="w-[50vh] h-[60vh] flex-shrink-0">
+                <img src="./seni/gendang.png" alt="" class="w-full h-full rounded-[40px_200px_20px_70px]" />
+              </div>
+              <div class="">
+                <div class="mx-20">
+                  <h1 class="font-poppins font-bold text-2xl text-[#003159]">Gendang Beleq, NTB</h1>
+                  <p class="font-poppins text-xl text-[#003159]">Alat musik tradisional besar yang dimainkan dalam upacara adat.</p>
+                  <div class="mt-14">
+                    <a href="./seni/gendang/index.html" class="font-poppins text-[#590000] border border-solid border-[#FF0000] rounded-full w-fit px-3 py-1">Jelajahi sekarang</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center justify-end">
+              <div class="">
+                <div class="mx-20 text-end">
+                  <h1 class="font-poppins font-bold text-2xl text-[#003159]">Serune Kale, Aceh</h1>
+                  <p class="font-poppins text-xl text-[#003159]">Alat musik tiup tradisional khas Aceh, sering dimainkan dalam acara budaya.</p>
+                  <div class="mt-14">
+                    <a href="./seni/serune/index.html" class="font-poppins text-[#590000] border border-solid border-[#FF0000] rounded-full w-fit px-3 py-1">Jelajahi sekarang</a>
+                  </div>
+                </div>
+              </div>
+              <div class="w-[50vh] h-[60vh] flex-shrink-0">
+                <img src="./seni/serune.png" alt="" class="w-full h-full rounded-[200px_40px_70px_20px]" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-[#008906] w-full">
+      <div class="text-white">
+        <p class="text-center text-xl pt-20">Dipersembahkan Oleh:</p>
+        <div class="flex">
+          <div class="flex justify-center flex-col items-center">
+            <img src="../budaya/footer/logo.png" alt="" class="w-[40vh]" />
+            <div class="text-center">
+              <p class="font-sancreek text-2xl font-bold">Sam&Bud</p>
+              <p class="font-poppins text-xs">Samudra dan Budaya</p>
+            </div>
+          </div>
+          <div class="flex w-full justify-center space-x-4">
+            <a href="https://www.indonesia.travel/gb/en/home.html" target="_blank">
+              <img src="../budaya/footer/wi.png" alt="Wi Image" class="w-[50vh] h-[40vh] object-contain" />
+            </a>
+            <a href="https://indonesia.go.id/" target="_blank">
+              <img src="../budaya/footer/id.png" alt="ID Image" class="w-[50vh] h-[40vh] object-contain" />
+            </a>
+          </div>
+        </div>
+        <div class="flex justify-center items-center w-full">
+          <img src="../budaya/footer/fb.png" alt="" class="w-[10vh] h-[5vh] object-contain" />
+          <img src="../budaya/footer/x.png" alt="" class="w-[10vh] h-[5vh] object-contain" />
+          <img src="../budaya/footer/yt.png" alt="" class="w-[10vh] h-[5vh] object-contain" />
+          <img src="../budaya/footer/tt.png" alt="" class="w-[10vh] h-[5vh] object-contain" />
+        </div>
+        <div class="mt-16 pb-10">
+          <p class="text-center font-poppins text-xs">Copyright © Sam&Bud 2024</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function changeContent(section) {
+        // Hex-to-RGB map for button colors
+
+        // Hide all content sections
+        const sections = document.querySelectorAll("#content > div");
+        sections.forEach((sec) => sec.classList.add("hidden"));
+
+        // Show the selected section
+        const selectedSection = document.getElementById(section);
+        if (selectedSection) {
+          selectedSection.classList.remove("hidden");
+        }
+
+        // Remove active styles from all buttons
+        const buttons = document.querySelectorAll("button");
+
+        // Add active styles based on the button's color
+        const activeButton = document.querySelector(`button[onclick="changeContent('${section}')"]`);
+        if (activeButton) {
+          // Get computed RGB color
+          const bgColor = getComputedStyle(activeButton).backgroundColor;
+
+          // Compare and add styles based on the color
+          if (section === "tradisi") {
+            // Yellow
+            activeButton.classList.add("bg-[#ffd700]");
+            buttons.forEach((btn) => {
+              btn.classList.remove("bg-[#e8f1f8]", "bg-[#66BB6A66]", "bg-[#BB666666]");
+            });
+          } else if (section === "alam") {
+            // Light blue
+            activeButton.classList.add("bg-[#e8f1f8]");
+            buttons.forEach((btn) => {
+              btn.classList.remove("bg-[#ffd700]", "bg-[#66BB6A66]", "bg-[#BB666666]");
+            });
+          } else if (section === "kuliner") {
+            // Light blue
+            activeButton.classList.add("bg-[#66BB6A66]");
+            buttons.forEach((btn) => {
+              btn.classList.remove("bg-[#ffd700]", "bg-[#e8f1f8]", "bg-[#BB666666]");
+            });
+          } else if (section === "seni") {
+            // Light blue
+            activeButton.classList.add("bg-[#BB666666]");
+            buttons.forEach((btn) => {
+              btn.classList.remove("bg-[#e8f1f8]", "bg-[#ffd700]", "bg-[#66BB6A66]");
+            });
+          } else {
+            // Default case
+            activeButton.classList.add("ring-4", "ring-gray-500");
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

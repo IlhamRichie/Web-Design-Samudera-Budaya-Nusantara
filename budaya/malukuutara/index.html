@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth scroll-pt-[6rem]">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../dist/jqvmap.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Sansita&family=Sancreek&family=Poppins&display=swap" rel="stylesheet" />
+    <title>Maluku Utara</title>
+  </head>
+
+  <body>
+    <div class="h-16 w-full flex items-center shadow-md top-0 sticky z-50 transition-all duration-300 ease-in-out" id="navbar">
+      <h1 class="font-sancreek absolute ms-10 w-fit text-[#66BB6A] text-3xl" id="logo">Sam&Bud</h1>
+      <div class="flex mx-auto justify-center items-center w-fit">
+        <div class="flex gap-4 text-[#66BB6A]" id="nav-child">
+          <div class="rounded-lg w-fit py-1 px-2">
+            <a href="../../index.html" class="font-[400] text-xl font-sansation">Beranda</a>
+          </div>
+          <div class="rounded-lg w-fit py-1 px-2">
+            <a href="../../index.html#sejarah" class="font-[400] text-xl font-sansation">Sejarah</a>
+          </div>
+          <div class="rounded-lg w-fit py-1 px-2">
+            <a href="../../index.html#budaya" class="font-[400] text-xl font-sansation">Budaya & Tradisi</a>
+          </div>
+          <div class="rounded-lg w-fit py-1 px-2">
+            <a href="../../galeri/index.html" class="font-[400] text-xl font-sansation">Galeri</a>
+          </div>
+          <div class="rounded-lg w-fit py-1 px-2">
+            <a href="../../kegiatan nusantara/index.html" class="font-[400] text-xl font-sansation">Kegiatan Nusantara</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="h-[100vh] w-full bg-cover bg-center overflow-hidden" style="background-image: url('../../bg/batik.png')">
+      <div class="pt-8 flex justify-center flex-col">
+        <h1 class="font-sancreek text-5xl text-[#66bb6a] text-center font-[400]">Budaya & Tradisi</h1>
+        <p class="font-poppins text-[#0a5900] text-center">Keindahan Budaya Nusantara</p>
+      </div>
+
+      <div class="flex justify-center w-[75rem] overflow-hidden mx-8 rounded-xl z-30 mt-[2vh]">
+        <div id="vmap" class="w-screen h-[380px] py-4"></div>
+      </div>
+
+      <div class="w-screen mt-[1vh] flex justify-center overflow-hidden">
+        <div class="text-[#0a5900] font-poppins text-xl px-6 rounded-full py-2 w-fit border border-solid border-black">
+          <p href="">Klik Daerah di Peta untuk Menjelajahi Budaya Lokal</p>
+        </div>
+      </div>
+    </div>
+    <div class="bg-[#66BB6A1A] px-20 pt-16">
+      <div class="text-[#0A5900]">
+        <p>Informasi Daerah</p>
+        <h1 class="text-4xl font-bold font-sancreek my-6">Maluku Utara</h1>
+        <p class="font-poppins text-xl">
+          Maluku Utara dikenal sebagai "Negeri Rempah" karena sejarahnya sebagai penghasil utama cengkeh dan pala yang menjadi daya tarik bagi bangsa-bangsa Eropa pada abad ke-15 dan 16. Wilayah ini merupakan pusat Kesultanan Ternate dan
+          Tidore, dua kerajaan Islam yang berjaya pada masa lampau.
+        </p>
+        <div class="w-full h-[60vh] mt-6">
+          <img src="./img1.png" alt="" class="w-full h-full object-cover object-center rounded-lg" />
+          <div class="font-poppins mt-5">
+            <span class="text-2xl font-bold">Tarian Tradisional</span>
+            <!-- <span class="text-xl">adalah tarian tradisional Bengkulu yang biasanya ditampilkan dalam acara pernikahan. Tarian ini melambangkan kebersamaan dan persatuan masyarakat, dengan gerakan yang enerjik dan ceria.</span> -->
+            <ul class="list-disc pl-5 text-xl">
+              <li>Tari Lenso: Tarian pergaulan yang sering dilakukan pada acara adat dan perayaan dengan menggunakan selendang sebagai properti.</li>
+              <li>Tari Salai Jin: Tarian tradisional khas Ternate yang menggambarkan cerita rakyat tentang jin, sering dipadukan dengan musik tradisional.</li>
+              <li>Tari Cakalele: Tarian perang khas Maluku Utara yang menunjukkan keberanian dan semangat juang, dilakukan oleh pria dengan senjata tradisional seperti parang dan tameng.</li>
+            </ul>
+          </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="mt-32 grid grid-cols-2 items-center gap-3 mb-6">
+          <div class="">
+            <img src="./img2.png" alt="" class="w-full h-full rounded-[16px_84px_237px_16px]" />
+          </div>
+          <div class="font-poppins text-[#0A5900]">
+            <p class="text-2xl font-bold">Pakaian Adat</p>
+            <!-- <p class="text-2xl text-justify">
+              Pakaian adat Bengkulu untuk pria disebut Baju Kurung Cekak Musang, dilengkapi dengan kain songket yang diselempangkan di bahu dan penutup kepala berbentuk tanduk. Untuk wanita, pakaian adat berupa Baju Kurung dengan kain
+              songket serta aksesori perhiasan emas, seperti gelang kano dan kalung tapak.
+            </p> -->
+            <ul class="list-disc pl-5 text-2xl">
+              <li>Baju Koja: Pakaian adat wanita berupa kebaya berwarna cerah yang dihiasi dengan kain tenun tradisional, melambangkan keanggunan perempuan Maluku Utara.</li>
+              <li>Manteren Lamo: Pakaian adat pria dari Kesultanan Ternate yang meliputi jas tutup panjang berwarna hitam dengan ornamen emas, lengkap dengan destar sebagai penutup kepala.</li>
+              <li>Perhiasan Tradisional: Wanita Maluku Utara sering memakai gelang dan kalung yang terbuat dari perak atau emas untuk melengkapi pakaian adat mereka.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex items-center mt-10">
+          <div class="w-[50vh] flex-shrink-0">
+            <img src="./img3.png" alt="" class="rounded-[16px_145px_32px_16px]" />
+          </div>
+          <div class="font-poppins text-[#0A5900] ms-6">
+            <p class="text-2xl font-bold">Alat Musik</p>
+            <p class="text-2xl text-justify">Alat musik tradisional Maluku Utara meliputi:</p>
+            <ul class="list-disc pl-5">
+              <li>Tifa: Alat musik pukul yang juga digunakan di Maluku Utara, sering dimainkan bersama dengan tarian tradisional.</li>
+              <li>Juk: Alat musik petik tradisional mirip dengan gitar, digunakan untuk mengiringi lagu daerah.</li>
+              <li>Totobuang: Sejenis gong kecil yang digunakan dalam musik tradisional, memberikan ritme khas.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-32 grid grid-cols-2 items-center gap-10 pb-8">
+          <div class="font-poppins text-[#0A5900]">
+            <p class="text-2xl font-bold">Kuliner</p>
+            <ul class="list-disc pl-5">
+              <li>Ikan Fufu: Ikan asap khas Maluku Utara yang biasanya diolah dengan bumbu rempah dan disantap bersama nasi atau sagu.</li>
+              <li>Papeda: Makanan pokok berupa bubur sagu, disajikan dengan kuah ikan kuning atau ikan bakar.</li>
+              <li>Halua Kenari: Kudapan manis yang terbuat dari kacang kenari dan gula, menjadi oleh-oleh khas daerah ini.</li>
+              <li>Sagu Lempeng: Kue kering tradisional berbahan dasar sagu, sering disajikan dengan kopi atau teh.</li>
+              <li>Goheba: Olahan pisang yang dimasak bersama santan, gula merah, dan rempah-rempah khas.</li>
+            </ul>
+          </div>
+          <div class="h-[50vh]">
+            <img src="./img4.png" alt="" class="object-cover w-full h-full rounded-[94px_14px_46px_236px]" />
+          </div>
+        </div>
+      </div>
+      <div class="w-full max-w-2xl mx-10 bg-white rounded-xl shadow-md">
+        <div class="aspect-video">
+          <iframe
+            class="w-[170vh] h-[80vh] rounded-xl"
+            src="https://www.youtube.com/embed/UUH5K7dIT14"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+      </div>
+      <div class="font-poppins text-[#0A5900] my-20">
+        <p class="text-2xl font-bold">Pariwisata</p>
+        <p class="text-2xl text-justify">Destinasi wisata populer di Maluku Utara antara lain:</p>
+        <ul class="list-disc pl-5">
+          <li>Kota Ternate dan Tidore: Kota bersejarah yang kaya akan peninggalan kerajaan, seperti benteng, masjid tua, dan istana kesultanan.</li>
+          <li>Danau Tolire: Danau mistis di kaki Gunung Gamalama dengan air yang berwarna hijau tua dan cerita rakyat yang menarik.</li>
+          <li>Pulau Morotai: Destinasi wisata bahari yang menjadi saksi sejarah Perang Dunia II, dengan pantai-pantai indah dan situs penyelaman.</li>
+          <li>Benteng Oranje: Peninggalan kolonial Belanda yang menjadi salah satu situs sejarah penting di Ternate.</li>
+          <li>Pantai Sulamadaha: Pantai dengan air laut yang sangat jernih, ideal untuk snorkeling dan berenang.</li>
+        </ul>
+      </div>
+      <div class="pb-4">
+        <div class="font-poppins text-[#0A5900] flex justify-center flex-col bg-[#0069051A] px-10 py-5 rounded-xl">
+          <p class="text-2xl font-bold text-center">Trivia Unik</p>
+          <!-- <p class="text-2xl text-center">Sumatera Barat menganut sistem kekerabatan matrilineal, di mana garis keturunan ditarik dari pihak ibu, yang unik di Indonesia.</p> -->
+          <ul class="list-disc pl-5">
+            <li>Maluku Utara memiliki lebih dari 700 pulau, tetapi hanya sekitar 70 pulau yang berpenghuni.</li>
+            <li>Danau Tolire dipercaya memiliki cerita mistis, salah satunya bahwa siapa pun yang melemparkan benda ke dalam danau tidak akan melihatnya jatuh ke permukaan air.</li>
+            <li>Tidore dan Ternate adalah dua kerajaan Islam yang bersaing, tetapi tetap menjaga hubungan persaudaraan.</li>
+            <li>Pulau Morotai sering disebut sebagai "Mutiara di Bibir Pasifik" karena keindahan dan nilai historisnya.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="bg-[#008906] w-full">
+      <div class="text-white">
+        <p class="text-center text-xl pt-20">Dipersembahkan Oleh:</p>
+        <div class="flex">
+          <div class="flex justify-center flex-col items-center">
+            <img src="../footer/logo.png" alt="" class="w-[40vh]" />
+            <div class="text-center">
+              <p class="font-sancreek text-2xl font-bold">Sam&Bud</p>
+              <p class="font-poppins text-xs">Samudra dan Budaya</p>
+            </div>
+          </div>
+          <div class="flex w-full justify-center space-x-4">
+            <a href="https://www.indonesia.travel/gb/en/home.html" target="_blank">
+              <img src="../footer/wi.png" alt="Wi Image" class="w-[50vh] h-[40vh] object-contain" />
+            </a>
+            <a href="https://indonesia.go.id/" target="_blank">
+              <img src="../footer/id.png" alt="ID Image" class="w-[50vh] h-[40vh] object-contain" />
+            </a>
+          </div>
+        </div>
+        <div class="flex justify-center items-center w-full">
+          <img src="../footer/fb.png" alt="" class="w-[10vh] h-[5vh] object-contain" />
+          <img src="../footer/x.png" alt="" class="w-[10vh] h-[5vh] object-contain" />
+          <img src="../footer/yt.png" alt="" class="w-[10vh] h-[5vh] object-contain" />
+          <img src="../footer/tt.png" alt="" class="w-[10vh] h-[5vh] object-contain" />
+        </div>
+        <div class="mt-16 pb-10">
+          <p class="text-center font-poppins text-xs">Copyright © Sam&Bud 2024</p>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../../dist/jquery.vmap.js"></script>
+    <script type="text/javascript" src="../../dist/jquery.vmap.indonesia.js" charset="utf-8"></script>
+
+    <script>
+      window.onscroll = function () {
+        var navbar = document.getElementById("navbar");
+        var navc = document.getElementById("nav-child");
+        var logo = document.getElementById("logo");
+        if (window.scrollY > 550) {
+          navbar.classList.add("shadow-lg"); // Add white background and shadow
+          navbar.classList.remove("bg-transparent", "shadow-none"); // Remove transparency and shadow
+        } else {
+          navbar.classList.add("bg-transparent", "shadow-none"); // Add transparency and remove shadow
+          navbar.classList.remove("shadow-lg"); // Remove white background and shadow
+        }
+      };
+
+      jQuery(document).ready(function () {
+        const regionContent = {}; // Initialize empty object
+        const path = [
+          {
+            path01: { href: "../aceh/index.html" },
+            path03: { href: "../sumbar/index.html" },
+            path04: { href: "../riau/index.html" },
+            path17: { href: "../bali/index.html" },
+            path19: { href: "../ntt/index.html" },
+            path27: { href: "../sulsel/index.html" },
+            path20: { href: "../kalbar/index.html" },
+            path33: { href: "../papua/index.html" },
+            path02: { href: "../sumut/index.html" },
+            path05: { href: "../jambi/index.html" },
+            path07: { href: "../bengkulu/index.html" },
+            path06: { href: "../sumsel/index.html" },
+            path08: { href: "../lampung/index.html" },
+            path14: { href: "../banten/index.html" },
+            path12: { href: "../jabar/index.html" },
+            path13: { href: "../jateng/index.html" },
+            path15: { href: "../jatim/index.html" },
+            path18: { href: "../ntb/index.html" },
+            path31: { href: "../maluku/index.html" },
+            path34: { href: "../papuabarat/index.html" },
+            path32: { href: "../malukuutara/index.html" },
+            path25: { href: "../sulut/index.html" },
+            path29: { href: "../gorontalo/index.html" },
+            path26: { href: "../sulteng/index.html" },
+            path30: { href: "../sulbar/index.html" },
+            path28: { href: "../sultenggara/index.html" },
+            path10: { href: "../kepriau/index.html" },
+            path09: { href: "../kepbangka/index.html" },
+            path23: { href: "../kaltim/index.html" },
+            path22: { href: "../kalsel/index.html" },
+            path21: { href: "../kalteng/index.html" },
+            path24: { href: "../kalut/index.html" },
+            path11: { href: "../jakarta/index.html" },
+            path16: { href: "../jogja/index.html" },
+          },
+        ];
+        // Populate regionContent dynamically from the path data
+        path.forEach((region) => {
+          Object.assign(regionContent, region);
+        });
+
+        // Now initialize the vector map
+        jQuery("#vmap").vectorMap({
+          map: "indonesia_id",
+          selectedColor: null,
+          colors: {
+            path32: "#7cff6a", // Set Aceh (path01) to green
+          },
+          onRegionClick: function (event, code, region) {
+            event.preventDefault();
+
+            const content = regionContent[code];
+            if (content && content.href) {
+              // Redirect to the href specified in the data
+              window.location.href = content.href;
+            } else {
+              alert("No data available for this region.");
+            }
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

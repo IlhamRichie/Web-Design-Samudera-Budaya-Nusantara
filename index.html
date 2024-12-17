@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth scroll-pt-[6rem]">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./dist/jqvmap.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Sansita&family=Sancreek&family=Poppins&display=swap" rel="stylesheet" />
+    <title>Beranda</title>
+    <style>
+      @keyframes cloud-move {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(100%);
+        }
+      }
+
+      @layer utilities {
+        .animate-cloud {
+          animation: cloud-move calc(8s * var(--i)) linear infinite;
+        }
+
+        .nav {
+          @apply relative ml-10 tracking-[1px] hover:text-black;
+        }
+        .nav::after {
+          @apply content-[''] bg-white h-[3px] w-[100%] left-0 -bottom-[5px] absolute;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="h-16 w-full flex items-center shadow-md top-0 sticky z-50 transition-all duration-300 ease-in-out" id="navbar">
+      <h1 class="font-sancreek absolute ms-10 w-fit text-white text-3xl" id="logo">Sam&Bud</h1>
+      <div class="flex mx-auto justify-center items-center w-fit">
+        <div class="flex gap-4 text-white" id="nav-child">
+          <div class="rounded-lg w-fit py-1 px-2">
+            <a href="#" class="font-[400] text-xl font-sansation">Beranda</a>
+          </div>
+          <div class="rounded-lg w-fit py-1 px-2">
+            <a href="#sejarah" class="font-[400] text-xl font-sansation">Sejarah</a>
+          </div>
+          <div class="rounded-lg w-fit py-1 px-2">
+            <a href="#budaya" class="font-[400] text-xl font-sansation">Budaya & Tradisi</a>
+          </div>
+          <div class="rounded-lg w-fit py-1 px-2">
+            <a href="galeri/index.html" class="font-[400] text-xl font-sansation">Galeri</a>
+          </div>
+          <div class="rounded-lg w-fit py-1 px-2">
+            <a href="./kegiatan nusantara/index.html" class="font-[400] text-xl font-sansation">Kegiatan Nusantara</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="relative overflow-hidden">
+      <div class="fixed inset-0 -z-10 overflow-hidden">
+        <video autoplay loop muted playsinline class="w-full h-full object-cover overflow-hidden">
+          <source src="./bg/vid1.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <!-- Content on top of the video -->
+      <div class="relative items-center justify-center h-screen">
+        <div class="absolute -bottom-12 left-0 w-full h-full overflow-hidden">
+          <div class="absolute left-0 w-full h-full">
+            <img src="./bg/cloud/cloud1.png" class="absolute bottom-0 w-full animate-cloud" style="--i: 1" />
+            <img src="./bg/cloud/cloud2.png" class="absolute bottom-0 w-full animate-cloud" style="--i: 2" />
+            <img src="./bg/cloud/cloud3.png" class="absolute bottom-0 w-full animate-cloud" style="--i: 3" />
+            <img src="./bg/cloud/cloud4.png" class="absolute bottom-0 w-full animate-cloud" style="--i: 4" />
+            <img src="./bg/cloud/cloud5.png" class="absolute bottom-0 w-full animate-cloud" style="--i: 5" />
+            <img src="./bg/cloud/cloud2.png" class="absolute bottom-0 w-full animate-cloud" style="--i: 6" />
+            <img src="./bg/cloud/cloud4.png" class="absolute bottom-0 w-full animate-cloud" style="--i: 7" />
+          </div>
+        </div>
+        <div class="flex items-center justify-center font-poppins mt-32 mb-5">
+          <div class="border-t border-white w-16"></div>
+          <span class="px-4 text-white text-lg">Kekayaan Samudera dan Budaya Nusantara</span>
+          <div class="border-t border-white w-16"></div>
+        </div>
+        <div class="font-bold font-sancreek text-8xl flex justify-center text-white mb-[2vh]">
+          <p>Samudra&Budaya</p>
+        </div>
+        <div class="font-poppins text-white mx-32 text-center">
+          <p>
+            Nusantara, negeri kepulauan yang dipenuhi dengan kekayaan alam dan budaya yang tiada tanding. Dari luasnya samudera yang menghubungkan ribuan pulau hingga tradisi yang diwariskan lintas generasi, Hari Nusantara adalah perayaan
+            persatuan dan keberagaman Indonesia.
+          </p>
+        </div>
+      </div>
+
+      <div class="relative bg-white text-black py-28">
+        <div class="absolute right-[12vh] top-[10vh] z-0">
+          <svg width="1132" height="1625" viewBox="0 0 1132 1625" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M1077.26 7.8467C1074.96 1.62889 1068.06 -1.55214 1061.84 0.741662C1055.63 3.03547 1052.45 9.93549 1054.74 16.1533L1077.26 7.8467ZM93.2272 1624.51L148.008 1543.27L66.7726 1488.49L11.9924 1569.73L93.2272 1624.51ZM1061.86 37.7776C1063.81 44.1114 1070.52 47.6646 1076.86 45.7138C1083.19 43.763 1086.75 37.047 1084.79 30.7132L1061.86 37.7776ZM1097.54 76.45C1095.92 70.0244 1089.39 66.1313 1082.97 67.7545C1076.54 69.3776 1072.65 75.9024 1074.27 82.328L1097.54 76.45ZM1084.65 127.535C1085.99 134.025 1092.34 138.196 1098.83 136.852C1105.32 135.507 1109.49 129.156 1108.15 122.667L1084.65 127.535ZM1116.83 169.422C1115.75 162.883 1109.58 158.453 1103.04 159.528C1096.5 160.603 1092.07 166.776 1093.14 173.315L1116.83 169.422ZM1099.73 219.261C1100.54 225.839 1106.52 230.519 1113.1 229.714C1119.68 228.909 1124.36 222.923 1123.55 216.345L1099.73 219.261ZM1128.33 263.556C1127.8 256.95 1122.02 252.022 1115.41 252.55C1108.81 253.078 1103.88 258.861 1104.41 265.467L1128.33 263.556ZM1107.1 311.793C1107.34 318.416 1112.91 323.591 1119.53 323.351C1126.15 323.111 1131.33 317.548 1131.09 310.925L1107.1 311.793ZM1131.73 358.36C1131.79 351.732 1126.47 346.311 1119.84 346.249C1113.22 346.188 1107.8 351.511 1107.73 358.138L1131.73 358.36ZM1106.21 404.475C1105.83 411.092 1110.89 416.762 1117.51 417.138C1124.13 417.515 1129.8 412.457 1130.17 405.84L1106.21 404.475ZM1126.28 453.268C1126.99 446.678 1122.23 440.762 1115.64 440.054C1109.05 439.345 1103.13 444.113 1102.42 450.702L1126.28 453.268ZM1096.28 496.549C1095.22 503.092 1099.67 509.251 1106.22 510.306C1112.76 511.36 1118.92 506.911 1119.97 500.368L1096.28 496.549ZM1111.11 547.146C1112.52 540.672 1108.42 534.276 1101.95 532.861C1095.47 531.445 1089.08 535.547 1087.66 542.021L1111.11 547.146ZM1076.5 586.884C1074.71 593.265 1078.43 599.888 1084.81 601.676C1091.2 603.464 1097.82 599.74 1099.61 593.358L1076.5 586.884ZM1085.38 638.837C1087.55 632.575 1084.23 625.74 1077.97 623.57C1071.71 621.4 1064.87 624.717 1062.7 630.979L1085.38 638.837ZM1045.48 673.362C1042.39 679.224 1044.63 686.482 1050.49 689.575C1056.35 692.668 1063.61 690.424 1066.71 684.563L1045.48 673.362ZM1037.11 725.95C1041.68 721.152 1041.5 713.557 1036.7 708.985C1031.9 704.413 1024.3 704.596 1019.73 709.394L1037.11 725.95ZM984.989 736.852C979.285 740.226 977.396 747.585 980.77 753.289C984.144 758.994 991.504 760.882 997.208 757.508L984.989 736.852ZM951.173 777.945C957.481 775.912 960.947 769.151 958.914 762.843C956.881 756.535 950.12 753.069 943.812 755.102L951.173 777.945ZM899.241 765.387C892.69 766.388 888.19 772.51 889.19 779.061C890.191 785.613 896.313 790.113 902.864 789.112L899.241 765.387ZM853.828 793.617C860.451 793.365 865.615 787.793 865.364 781.17C865.112 774.547 859.539 769.383 852.917 769.634L853.828 793.617ZM806.143 769.409C799.521 769.122 793.922 774.258 793.635 780.879C793.349 787.5 798.484 793.1 805.106 793.386L806.143 769.409ZM756.753 789.776C763.345 790.457 769.241 785.665 769.922 779.072C770.603 772.48 765.811 766.584 759.218 765.903L756.753 789.776ZM712.268 759.941C705.713 758.966 699.609 763.491 698.634 770.046C697.659 776.601 702.183 782.706 708.739 783.68L712.268 759.941ZM661.12 775.739C667.638 776.934 673.892 772.619 675.087 766.1C676.282 759.581 671.966 753.328 665.447 752.133L661.12 775.739ZM618.875 742.956C612.388 741.597 606.028 745.754 604.669 752.24C603.31 758.727 607.467 765.087 613.953 766.446L618.875 742.956ZM567.038 756.138C573.498 757.616 579.934 753.578 581.412 747.117C582.891 740.657 578.852 734.221 572.392 732.743L567.038 756.138ZM525.988 721.793C519.547 720.234 513.061 724.191 511.501 730.632C509.942 737.074 513.899 743.56 520.341 745.119L525.988 721.793ZM473.826 733.661C480.256 735.266 486.77 731.355 488.375 724.924C489.98 718.494 486.068 711.981 479.638 710.376L473.826 733.661ZM433.31 698.75C426.882 697.135 420.363 701.036 418.748 707.464C417.133 713.892 421.034 720.412 427.462 722.027L433.31 698.75ZM381.105 710.464C387.54 712.05 394.042 708.119 395.627 701.684C397.213 695.249 393.282 688.747 386.847 687.161L381.105 710.464ZM340.135 675.914C333.681 674.406 327.227 678.416 325.72 684.869C324.212 691.323 328.221 697.777 334.675 699.285L340.135 675.914ZM288.283 688.939C294.769 690.303 301.132 686.151 302.496 679.665C303.86 673.18 299.708 666.816 293.223 665.452L288.283 688.939ZM245.89 656.347C239.358 655.229 233.156 659.618 232.037 666.15C230.919 672.683 235.308 678.885 241.84 680.003L245.89 656.347ZM195.175 673.425C201.766 674.115 207.668 669.33 208.358 662.739C209.047 656.147 204.262 650.245 197.671 649.556L195.175 673.425ZM148.403 647.119C141.777 647.248 136.509 652.723 136.637 659.349C136.765 665.975 142.241 671.243 148.867 671.115L148.403 647.119ZM105.039 677.136C111.37 675.178 114.915 668.458 112.957 662.126C110.998 655.795 104.278 652.25 97.9466 654.208L105.039 677.136ZM52.4529 684.775C48.2868 689.929 49.0881 697.485 54.2424 701.651C59.3967 705.817 66.9524 705.016 71.1184 699.861L52.4529 684.775ZM49.5749 740.477C51.8357 734.247 48.618 727.364 42.388 725.103C36.1582 722.842 29.2751 726.06 27.0144 732.29L49.5749 740.477ZM13.4825 782.378C12.1958 788.879 16.4231 795.193 22.9244 796.479C29.4256 797.766 35.7391 793.539 37.0258 787.037L13.4825 782.378ZM29.7784 835.582C30.493 828.994 25.731 823.073 19.1423 822.358C12.5536 821.644 6.6329 826.406 5.9183 832.994L29.7784 835.582ZM1.97286 883.765C1.63802 890.384 6.73238 896.021 13.3513 896.356C19.9703 896.691 25.6074 891.596 25.9422 884.977L1.97286 883.765ZM24.5074 934.542C24.5695 927.915 19.2476 922.492 12.6206 922.43C5.99337 922.368 0.570639 927.69 0.508383 934.317L24.5074 934.542ZM0.860797 984.825C1.00704 991.451 6.49678 996.704 13.1226 996.558C19.7485 996.411 25.0012 990.922 24.8549 984.296L0.860797 984.825ZM26.6038 1034.17C26.2913 1027.55 20.6715 1022.44 14.0515 1022.75C7.43135 1023.06 2.31807 1028.68 2.63045 1035.3L26.6038 1034.17ZM5.53914 1085.58C5.98823 1092.19 11.7125 1097.18 18.3247 1096.74C24.9368 1096.29 29.9331 1090.56 29.484 1083.95L5.53914 1085.58ZM33.3145 1133.74C32.7498 1127.14 26.939 1122.24 20.3358 1122.8C13.7324 1123.37 8.83711 1129.18 9.40181 1135.78L33.3145 1133.74ZM14.0769 1185.88C14.7415 1192.47 20.6258 1197.28 27.2198 1196.62C33.8138 1195.95 38.6204 1190.07 37.9558 1183.47L14.0769 1185.88ZM43.306 1233.15C42.553 1226.57 36.6049 1221.84 30.0203 1222.59C23.4359 1223.34 18.7084 1229.29 19.4613 1235.88L43.306 1233.15ZM25.4896 1285.88C26.322 1292.45 32.3267 1297.11 38.9017 1296.28C45.4766 1295.44 50.1319 1289.44 49.2995 1282.86L25.4896 1285.88ZM55.8472 1332.36C54.9422 1325.79 48.8862 1321.21 42.3209 1322.11C35.7556 1323.02 31.1669 1329.07 32.0721 1335.64L55.8472 1332.36ZM39.2142 1385.51C40.1876 1392.06 46.2911 1396.59 52.8466 1395.61C59.4022 1394.64 63.9273 1388.54 62.9538 1381.98L39.2142 1385.51ZM70.5119 1431.18C69.4727 1424.63 63.3242 1420.17 56.7787 1421.21C50.2333 1422.25 45.7696 1428.39 46.8088 1434.94L70.5119 1431.18ZM54.9478 1484.57C56.0541 1491.11 62.2482 1495.51 68.7827 1494.4C75.3171 1493.3 79.7173 1487.1 78.611 1480.57L54.9478 1484.57ZM87.2964 1530.14C86.1116 1523.62 79.865 1519.3 73.3444 1520.48C66.8238 1521.67 62.4983 1527.91 63.6832 1534.43L87.2964 1530.14ZM1066 12C1054.74 16.1533 1054.74 16.1528 1054.74 16.1523C1054.74 16.1522 1054.74 16.1517 1054.74 16.1515C1054.74 16.151 1054.74 16.1506 1054.74 16.1504C1054.74 16.1499 1054.74 16.1499 1054.74 16.1503C1054.74 16.1513 1054.74 16.1541 1054.74 16.1588C1054.75 16.1682 1054.75 16.1852 1054.76 16.2098C1054.78 16.259 1054.81 16.3383 1054.85 16.4476C1054.93 16.6662 1055.05 17.0043 1055.21 17.4596C1055.53 18.3702 1056.01 19.7494 1056.64 21.5777C1057.88 25.2343 1059.67 30.6863 1061.86 37.7776L1084.79 30.7132C1082.54 23.3912 1080.67 17.7205 1079.36 13.8577C1078.7 11.9263 1078.19 10.4466 1077.83 9.43834C1077.65 8.93418 1077.51 8.54784 1077.41 8.28176C1077.37 8.14871 1077.33 8.04573 1077.3 7.97312C1077.29 7.93682 1077.28 7.90811 1077.27 7.88702C1077.27 7.87648 1077.26 7.86785 1077.26 7.86112C1077.26 7.85776 1077.26 7.85488 1077.26 7.85248C1077.26 7.85127 1077.26 7.85019 1077.26 7.84923C1077.26 7.84875 1077.26 7.84811 1077.26 7.84787C1077.26 7.84727 1077.26 7.8467 1066 12ZM1074.27 82.328C1077.65 95.6928 1081.19 110.837 1084.65 127.535L1108.15 122.667C1104.61 105.609 1101 90.1278 1097.54 76.45L1074.27 82.328ZM1093.14 173.315C1095.54 187.88 1097.77 203.228 1099.73 219.261L1123.55 216.345C1121.55 199.969 1119.27 184.295 1116.83 169.422L1093.14 173.315ZM1104.41 265.467C1105.61 280.481 1106.53 295.945 1107.1 311.793L1131.09 310.925C1130.5 294.713 1129.56 278.901 1128.33 263.556L1104.41 265.467ZM1107.73 358.138C1107.59 373.33 1107.1 388.793 1106.21 404.475L1130.17 405.84C1131.09 389.761 1131.59 373.917 1131.73 358.36L1107.73 358.138ZM1102.42 450.702C1100.79 465.848 1098.76 481.144 1096.28 496.549L1119.97 500.368C1122.53 484.531 1124.61 468.816 1126.28 453.268L1102.42 450.702ZM1087.66 542.021C1084.41 556.927 1080.7 571.893 1076.5 586.884L1099.61 593.358C1103.94 577.907 1107.76 562.49 1111.11 547.146L1087.66 542.021ZM1062.7 630.979C1060.19 638.23 1057.55 645.479 1054.79 652.721L1077.21 661.279C1080.06 653.802 1082.79 646.32 1085.38 638.837L1062.7 630.979ZM1054.79 652.721C1052 660.027 1048.89 666.899 1045.48 673.362L1066.71 684.563C1070.58 677.213 1074.09 669.456 1077.21 661.279L1054.79 652.721ZM1019.73 709.394C1009.5 720.128 997.883 729.224 984.989 736.852L997.208 757.508C1011.88 748.828 1025.26 738.378 1037.11 725.95L1019.73 709.394ZM943.812 755.102C929.891 759.588 915 762.981 899.241 765.387L902.864 789.112C919.71 786.54 935.869 782.877 951.173 777.945L943.812 755.102ZM852.917 769.634C837.836 770.207 822.217 770.104 806.143 769.409L805.106 793.386C821.741 794.106 838.016 794.218 853.828 793.617L852.917 769.634ZM759.218 765.903C743.837 764.315 728.165 762.305 712.268 759.941L708.739 783.68C724.944 786.089 740.973 788.147 756.753 789.776L759.218 765.903ZM665.447 752.133C650.037 749.308 634.494 746.229 618.875 742.956L613.953 766.446C629.741 769.754 645.484 772.873 661.12 775.739L665.447 752.133ZM572.392 732.743C556.918 729.202 541.433 725.532 525.988 721.793L520.341 745.119C535.86 748.877 551.446 752.57 567.038 756.138L572.392 732.743ZM479.638 710.376C464.068 706.489 448.615 702.596 433.31 698.75L427.462 722.027C442.747 725.867 458.231 729.769 473.826 733.661L479.638 710.376ZM386.847 687.161C371.005 683.258 355.408 679.483 340.135 675.914L334.675 699.285C349.825 702.825 365.323 706.575 381.105 710.464L386.847 687.161ZM293.223 665.452C276.931 662.026 261.117 658.954 245.89 656.347L241.84 680.003C256.707 682.548 272.218 685.56 288.283 688.939L293.223 665.452ZM197.671 649.556C180.16 647.725 163.652 646.824 148.403 647.119L148.867 671.115C162.881 670.844 178.366 671.668 195.175 673.425L197.671 649.556ZM97.9466 654.208C89.0132 656.971 80.7655 660.657 73.4276 665.46L86.5724 685.54C91.7229 682.169 97.8569 679.358 105.039 677.136L97.9466 654.208ZM73.4276 665.46C65.5957 670.587 58.6341 677.127 52.4529 684.775L71.1184 699.861C75.9708 693.858 81.1269 689.105 86.5724 685.54L73.4276 665.46ZM27.0144 732.29C21.5428 747.368 17.0814 764.194 13.4825 782.378L37.0258 787.037C40.4471 769.751 44.6136 754.149 49.5749 740.477L27.0144 732.29ZM5.9183 832.994C4.15865 849.219 2.86153 866.198 1.97286 883.765L25.9422 884.977C26.8111 867.801 28.0752 851.286 29.7784 835.582L5.9183 832.994ZM0.508383 934.317C0.353475 950.824 0.48299 967.698 0.860797 984.825L24.8549 984.296C24.482 967.393 24.3551 950.773 24.5074 934.542L0.508383 934.317ZM2.63045 1035.3C3.41646 1051.95 4.39607 1068.74 5.53914 1085.58L29.484 1083.95C28.3512 1067.27 27.3813 1050.64 26.6038 1034.17L2.63045 1035.3ZM9.40181 1135.78C10.8367 1152.56 12.405 1169.29 14.0769 1185.88L37.9558 1183.47C36.2952 1167 34.7384 1150.39 33.3145 1133.74L9.40181 1135.78ZM19.4613 1235.88C21.4011 1252.84 23.4218 1269.55 25.4896 1285.88L49.2995 1282.86C47.2431 1266.62 45.234 1250.01 43.306 1233.15L19.4613 1235.88ZM32.0721 1335.64C34.4537 1352.91 36.8502 1369.59 39.2142 1385.51L62.9538 1381.98C60.6013 1366.14 58.2167 1349.55 55.8472 1332.36L32.0721 1335.64ZM46.8088 1434.94C49.6962 1453.13 52.4433 1469.78 54.9478 1484.57L78.611 1480.57C76.1192 1465.85 73.3856 1449.28 70.5119 1431.18L46.8088 1434.94ZM63.6832 1534.43C65.1031 1542.25 66.2354 1548.33 67.0137 1552.46C67.4029 1554.52 67.7035 1556.1 67.9075 1557.16C68.0095 1557.7 68.0872 1558.1 68.1397 1558.37C68.1661 1558.51 68.186 1558.61 68.1995 1558.68C68.2062 1558.72 68.2115 1558.74 68.215 1558.76C68.2167 1558.77 68.2181 1558.78 68.219 1558.78C68.2195 1558.79 68.2199 1558.79 68.2201 1558.79C68.2203 1558.79 68.2204 1558.79 68.2205 1558.79C68.2205 1558.79 68.2206 1558.79 68.2206 1558.79C68.2206 1558.79 68.2206 1558.79 79.9999 1556.5C91.7792 1554.21 91.7792 1554.21 91.7792 1554.21C91.7792 1554.21 91.7791 1554.21 91.7791 1554.21C91.779 1554.21 91.7787 1554.21 91.7784 1554.2C91.7776 1554.2 91.7765 1554.2 91.7751 1554.19C91.7721 1554.17 91.7675 1554.15 91.7613 1554.12C91.7488 1554.05 91.7299 1553.95 91.7046 1553.82C91.6544 1553.56 91.5787 1553.17 91.4789 1552.65C91.2795 1551.61 90.9832 1550.05 90.5987 1548.01C89.8294 1543.93 88.7066 1537.9 87.2964 1530.14L63.6832 1534.43Z"
+              fill="url(#paint0_linear_62_977)"
+            />
+            <defs>
+              <linearGradient id="paint0_linear_62_977" x1="288.386" y1="1556.5" x2="843.835" y2="12.0001" gradientUnits="userSpaceOnUse">
+                <stop offset="0.360978" stop-color="#1C75BC" />
+                <stop offset="0.755057" stop-color="#E53935" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="absolute w-screen left-[8vh] top-[30vh] z-0">
+          <img src="img/map.svg" alt="" />
+        </div>
+        <div id="sejarah" class="grid grid-cols-2 gap-10 h-screen">
+          <div class="relative">
+            <h1 class="font-sancreek text-5xl text-[#e53935] absolute -top-[1vh] left-[7vh]">Sejarah</h1>
+            <p class="font-poppins text-xl text-[#4a0200] absolute top-[7vh] left-[7vh]">Hari Nusantara: Perayaan Negara Kepulauan</p>
+            <p class="mt-20 w-[18rem] text-xl text-[#4a0200] absolute top-[18vh] left-[7vh]">
+              Hari Nusantara diperingati setiap tanggal 13 Desember sebagai simbol pengakuan Indonesia sebagai negara kepulauan terbesar di dunia. Deklarasi ini menjadi titik tolak penting dalam perjalanan bangsa untuk menegaskan kedaulatan
+              maritimnya di mata dunia.
+            </p>
+          </div>
+          <div class="relative">
+            <p class="text-xl text-[#4a0200] w-[25rem] text-right flex absolute -top-[12vh] right-[33vh]">13 Desember 1957 - Deklarasi Djuanda, menyatakan bahwa laut Indonesia adalah bagian integral dari wilayah NKRI.</p>
+            <p class="text-xl text-[#4a0200] w-[25rem] text-right flex absolute top-[30vh] right-[28vh]">1982 - Pengakuan resmi dari Konvensi Hukum Laut PBB (UNCLOS) tentang konsep negara kepulauan.</p>
+            <p class="text-xl text-[#4a0200] w-[25rem] text-right flex absolute bottom-[12vh] right-[33vh]">2001 - Hari Nusantara ditetapkan oleh Presiden Megawati Soekarnoputri untuk memperkuat kesadaran maritim bangsa.</p>
+          </div>
+        </div>
+        <div class="h-[170vh] w-screen bg-[#1c75bc1a]">
+          <div class="flex justify-end relative">
+            <p class="text-[#003159] font-poppins text-xl absolute top-[30vh] right-[25vh]">Kejayaan Maritim Nusantara: Dari Masa ke Masa</p>
+            <p class="text-[#003159] font-poppins text-right w-[140vh] text-2xl absolute top-[50vh] right-[25vh]">
+              Hari Nusantara diperingati setiap tanggal 13 Desember sebagai simbol pengakuan Indonesia sebagai negara kepulauan terbesar di dunia. Deklarasi ini menjadi titik tolak penting dalam perjalanan bangsa untuk menegaskan kedaulatan
+              maritimnya di mata dunia.
+            </p>
+          </div>
+          <div class="relative flex justify-end w-screen">
+            <div class="container flex flex-wrap gap-6">
+              <div class="small-cards flex flex-wrap gap-4 w-full justify-end mt-[80vh]">
+                <div id="card-1" onclick="expandCard('card-1')" class="card small relative bg-gray-900 p-6 rounded-2xl shadow-md cursor-pointer h-[55vh] w-[80vh] transition-all">
+                  <div class="absolute inset-0">
+                    <img src="img/sejarah/img2.png" alt="" class="w-full h-full object-cover rounded-2xl brightness-50" />
+                  </div>
+                  <div class="absolute">
+                    <p class="text-white font-poppins">Sriwijaya dikenal sebagai kerajaan maritim terbesar di Asia Tenggara, menguasai jalur perdagangan dari Selat Malaka hingga Laut Jawa.</p>
+                  </div>
+                  <div class="bg-[#003159cc] w-fit px-5 pb-2 pt-1 absolute left-0 bottom-[6vh] ctitle overflow-visible">
+                    <h2 class="text-xl font-bold text-white whitespace-nowrap">Masa Kerajaan Sriwijaya<br />(Abad ke-7)</h2>
+                  </div>
+                </div>
+                <div id="card-2" onclick="expandCard('card-2')" class="card small relative bg-gray-900 p-4 rounded-2xl shadow-md cursor-pointer h-[55vh] w-[35vh] transition-all">
+                  <div class="absolute inset-0">
+                    <img src="img/sejarah/img3.png" alt="" class="w-full h-full object-cover rounded-2xl brightness-50" />
+                  </div>
+                  <div class="absolute">
+                    <p class="hidden font-poppins text-white">Wilayah Nusantara disatukan oleh kekuatan maritim dan armada perang yang tangguh.</p>
+                  </div>
+                  <div class="bg-[#003159cc] w-[12vh] px-5 pb-2 pt-1 absolute left-0 bottom-[6vh] -rotate-90 ctitle overflow-visible">
+                    <h3 class="text-xl font-bold text-white whitespace-nowrap">Kerajaan Majapahit<br />(Abad ke-13)</h3>
+                  </div>
+                </div>
+
+                <div id="card-3" onclick="expandCard('card-3')" class="card small relative bg-gray-900 p-4 rounded-2xl shadow-md cursor-pointer h-[55vh] w-[35vh] transition-all">
+                  <div class="absolute inset-0">
+                    <img src="img/sejarah/img1.png" alt="" class="w-full h-full object-cover rounded-2xl brightness-50" />
+                  </div>
+                  <div class="absolute">
+                    <p class="hidden text-white font-poppins">Indonesia menjadi pusat perdagangan dunia karena kekayaan hasil bumi seperti pala, cengkeh, dan lada.</p>
+                  </div>
+                  <div class="bg-[#003159cc] w-[12vh] px-5 pb-2 pt-1 absolute left-0 bottom-[6vh] -rotate-90 ctitle overflow-visible">
+                    <h3 class="text-lg font-bold text-white whitespace-nowrap">Perdagangan Rempah-Rempah<br />(Abad ke-16)</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="w-screen flex justify-end z-20">
+                <div class="bg-[#003159cc] w-[120vh] px-7 py-5 mt-[12vh]">
+                  <p class="font-poppins text-white text-xl text-center">“Laut kita luas, kekayaan kita besar, dan tanggung jawab kita untuk menjaga warisan ini tidak pernah berakhir.”</p>
+                </div>
+              </div>
+              <div class="bg-[#003159cc] w-[90vh] h-[10vh] px-7 py-10 absolute -bottom-[3vh] left-[25%]"></div>
+            </div>
+          </div>
+        </div>
+        <div id="" class="h-[100vh] w-screen bg-cover bg-center" style="background-image: url('./bg/batik.png')">
+          <div class="pt-8">
+            <h1 id="budaya" class="font-sancreek text-5xl text-[#66bb6a] text-center font-[400]">Budaya & Tradisi</h1>
+            <p class="font-poppins text-[#0a5900] text-center">Keindahan Budaya Nusantara</p>
+          </div>
+
+          <div class="flex justify-center w-[75rem] overflow-hidden mx-8 rounded-xl z-30 mt-[2vh]">
+            <div id="vmap" class="w-screen h-[380px] py-4"></div>
+          </div>
+
+          <div class="w-screen mt-[1vh] flex justify-center">
+            <div class="text-[#0a5900] font-poppins text-xl px-6 rounded-full py-2 w-fit border border-solid border-black">
+              <p href="">Klik Pulau di Peta untuk Menjelajahi Budaya Lokal</p>
+            </div>
+          </div>
+        </div>
+        <div class="h-[170vh] w-screen bg-[#66bb6a1a]">
+          <!-- Pakaian Adat -->
+          <div class="">
+            <div class="text-center pt-[4vh] text-xl font-poppins text-[#0a5900]">
+              <p class="">Pakaian Adat</p>
+            </div>
+            <div class="row-1 flex overflow-scroll gap-4 w-full justify-center mt-[8vh]">
+              <div id="row1-card1" onclick="expandRow1Card('row1-card1')" class="card-small relative bg-gray-900 rounded-2xl shadow-md cursor-pointer h-[40vh] w-[60vh] transition-all">
+                <div class="absolute inset-0">
+                  <img src="img/pakaian/songket.png" alt="" class="w-full h-full object-cover rounded-2xl brightness-50" />
+                </div>
+                <div class="absolute">
+                  <p class="text-white font-poppins text-sm mx-4 mt-3">Kain songket mencerminkan keanggunan dan status sosial, sering digunakan dalam acara adat dan pernikahan.</p>
+                </div>
+                <div class="bg-[#66bb6acc] w-fit px-3 pb-1 absolute left-0 bottom-[2vh] ctitle-row1 overflow-visible">
+                  <h2 class="texmdlg font-bold text-white whitespace-nowrap">Songket Sumatera</h2>
+                </div>
+              </div>
+              <div id="row1-card2" onclick="expandRow1Card('row1-card2')" class="card-small relative bg-gray-900 rounded-2xl shadow-md cursor-pointer h-[40vh] w-[25vh] transition-all">
+                <div class="absolute inset-0">
+                  <img src="img/pakaian/ulos.png" alt="" class="w-full h-full object-cover rounded-2xl brightness-50" />
+                </div>
+                <div class="absolute">
+                  <p class="hidden font-poppins text-white text-sm mx-4 mt-3">Ulos melambangkan ikatan kekeluargaan dan kehangatan, sering diberikan sebagai simbol penghormatan.</p>
+                </div>
+                <div class="bg-[#66bb6acc] w-[6vh] px-3 pb-1 absolute left-0 bottom-[2vh] -rotate-90 ctitle-row1 overflow-visible">
+                  <h2 class="text-md font-bold text-white whitespace-nowrap">Ulos Batak</h2>
+                </div>
+              </div>
+              <div id="row1-card3" onclick="expandRow1Card('row1-card3')" class="card-small relative bg-gray-900 rounded-2xl shadow-md cursor-pointer h-[40vh] w-[25vh] transition-all">
+                <div class="absolute inset-0">
+                  <img src="img/pakaian/tenun.png" alt="" class="w-full h-full object-cover rounded-2xl brightness-50" />
+                </div>
+                <div class="absolute">
+                  <p class="hidden font-poppins text-white text-sm mx-4 mt-3">Kain tenun ikat dibuat dengan proses tradisional dan memiliki pola yang melambangkan kepercayaan lokal.</p>
+                </div>
+                <div class="bg-[#66bb6acc] w-[6vh] px-3 pb-1 absolute left-0 bottom-[2vh] -rotate-90 ctitle-row1 overflow-visible">
+                  <h2 class="text-md font-bold text-white whitespace-nowrap">Tenun Ikat NTT</h2>
+                </div>
+              </div>
+              <div id="row1-card4" onclick="expandRow1Card('row1-card4')" class="card-small relative bg-gray-900 rounded-2xl shadow-md cursor-pointer h-[40vh] w-[25vh] transition-all">
+                <div class="absolute inset-0">
+                  <img src="img/pakaian/kebaya.png" alt="" class="w-full h-full object-cover rounded-2xl brightness-50" />
+                </div>
+                <div class="absolute">
+                  <p class="hidden font-poppins text-white text-sm mx-4 mt-3">Melambangkan keanggunan dan kelembutan perempuan Jawa, sering dipadukan dengan kain batik.</p>
+                </div>
+                <div class="bg-[#66bb6acc] w-[6vh] px-3 pb-1 absolute left-0 bottom-[2vh] -rotate-90 ctitle-row1 overflow-visible">
+                  <h2 class="text-md font-bold text-white whitespace-nowrap">Kebaya Jawa</h2>
+                </div>
+              </div>
+              <div id="row1-card5" onclick="expandRow1Card('row1-card5')" class="card-small relative bg-gray-900 rounded-2xl shadow-md cursor-pointer h-[40vh] w-[25vh] transition-all">
+                <div class="absolute inset-0">
+                  <img src="img/pakaian/bodo.png" alt="" class="w-full h-full object-cover rounded-2xl brightness-50" />
+                </div>
+                <div class="absolute">
+                  <p class="hidden font-poppins text-white text-sm mx-4 mt-3">Pakaian adat berbahan ringan dengan warna cerah yang melambangkan kegembiraan dan kemuliaan.</p>
+                </div>
+                <div class="bg-[#66bb6acc] w-[6vh] px-3 pb-1 absolute left-0 bottom-[2vh] -rotate-90 ctitle-row1 overflow-visible">
+                  <h2 class="text-md font-bold text-white whitespace-nowrap">Baju Bodo Bugis</h2>
+                </div>
+              </div>
+              <div id="row1-card6" onclick="expandRow1Card('row1-card6')" class="card-small relative bg-gray-900 rounded-2xl shadow-md cursor-pointer h-[40vh] w-[25vh] transition-all">
+                <div class="absolute inset-0">
+                  <img src="img/pakaian/kurung.png" alt="" class="w-full h-full object-cover rounded-2xl brightness-50" />
+                </div>
+                <div class="absolute">
+                  <p class="hidden font-poppins text-white text-sm mx-4 mt-3">Pakaian yang menunjukkan kesopanan dan nilai-nilai Islam yang kental dalam budaya Melayu.</p>
+                </div>
+                <div class="bg-[#66bb6acc] w-[6vh] px-3 pb-1 absolute left-0 bottom-[2vh] -rotate-90 ctitle-row1 overflow-visible">
+                  <h2 class="text-md font-bold text-white whitespace-nowrap">Baju Kurung Melayu</h2>
+                </div>
+              </div>
+              <div id="row1-card7" onclick="expandRow1Card('row1-card7')" class="card-small relative bg-gray-900 rounded-2xl shadow-md cursor-pointer h-[40vh] w-[25vh] transition-all">
+                <div class="absolute inset-0">
+                  <img src="img/pakaian/cekak.png" alt="" class="w-full h-full object-cover rounded-2xl brightness-50" />
+                </div>
+                <div class="absolute">
+                  <p class="hidden font-poppins text-white text-sm mx-4 mt-3">Busana pria yang dipakai dalam upacara adat dan mencerminkan kehormatan dan keperkasaan.</p>
+                </div>
+                <div class="bg-[#66bb6acc] w-[6vh] px-3 pb-1 absolute left-0 bottom-[2vh] -rotate-90 ctitle-row1 overflow-visible">
+                  <h2 class="text-md font-bold text-white whitespace-nowrap">Cekak Musang Minangkabau</h2>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          <!-- End Pakain Adat -->
+          <!-- Tarian Adat -->
+          <div class="">
+            <div class="text-center pt-[4vh] text-xl font-poppins text-[#0a5900]">
+              <p class="">Tarian Adat</p>
+            </div>
+            <div class="row-2 flex overflow-scroll gap-4 w-full justify-center mt-[8vh]">
+              <div id="row2-card1" onclick="expandRow2Card('row2-card1')" class="card-small relative bg-gray-900 rounded-2xl shadow-md cursor-pointer -[40vh] w-[25vh] transition-all">
+                <div class="absolute inset-0">
+                  <img src="img/tarian/piring.png" alt="" class="w-full h-full object-cover rounded-2xl brightness-50" />
+                </div>
+                <div class="absolute">
+                  <p class="text-white font-poppins text-sm mx-4 mt-3 hidden">Menggambarkan rasa syukur dengan gerakan indah menggunakan piring.</p>
+                </div>
+                <div class="bg-[#66bb6acc] w-[6vh] px-3 pb-1 absolute left-[1.5vh] bottom-[2vh] -rotate-90 ctitle-row1 overflow-visible">
+                  <h2 class="text-lg font-bold text-white whitespace-nowrap">
+                    Tari Piring - <br />
+                    Minangkabau
+                  </h2>
+                </div>
+              </div>
+              <div id="row2-card2" onclick="expandRow2Card('row2-card2')" class="card-small relative bg-gray-900 rounded-2xl shadow-md cursor-pointer h-[40vh] w-[25vh] transition-all">
+                <div class="absolute inset-0">
+                  <img src="img/tarian/kecak.png" alt="" class="w-full h-full object-cover rounded-2xl brightness-50" />
+                </div>
+                <div class="absolute">
+                  <p class="hidden font-poppins text-white text-sm mx-4 mt-3">Menceritakan kisah Ramayana dengan harmoni suara "cak" dan gerakan dinamis.</p>
+                </div>
+                <div class="bg-[#66bb6acc] w-[6vh] px-3 pb-1 absolute left-[1.5vh] bottom-[2vh] -rotate-90 ctitle-row1 overflow-visible">
+                  <h2 class="text-md font-bold text-white whitespace-nowrap">
+                    Tari Kecak - <br />
+                    Bali
+                  </h2>
+                </div>
+              </div>
+              <div id="row2-card3" onclick="expandRow2Card('row2-card3')" class="card-small relative bg-gray-900 rounded-2xl shadow-md cursor-pointer h-[40vh] w-[25vh] transition-all">
+                <div class="absolute inset-0">
+                  <img src="img/tarian/saman.png" alt="" class="w-full h-full object-cover rounded-2xl brightness-50" />
+                </div>
+                <div class="absolute">
+                  <p class="hidden font-poppins text-white text-sm mx-4 mt-3">Tarian serempak penuh energi yang melambangkan kebersamaan dan kekompakan.</p>
+                </div>
+                <div class="bg-[#66bb6acc] w-[6vh] px-3 pb-1 absolute left-[1.5vh] bottom-[2vh] -rotate-90 ctitle-row1 overflow-visible">
+                  <h2 class="text-md font-bold text-white whitespace-nowrap">
+                    Tari Saman - <br />
+                    Aceh
+                  </h2>
+                </div>
+              </div>
+              <div id="row2-card4" onclick="expandRow2Card('row2-card4')" class="card-small relative bg-gray-900 rounded-2xl shadow-md cursor-pointer h-[40vh] w-[60vh] transition-all">
+                <div class="absolute inset-0">
+                  <img src="img/tarian/tor.png" alt="" class="w-full h-full object-cover rounded-2xl brightness-50" />
+                </div>
+                <div class="absolute">
+                  <p class="font-poppins text-white text-sm mx-4 mt-3">Digunakan dalam acara adat sebagai bentuk komunikasi dengan leluhur.</p>
+                </div>
+                <div class="bg-[#66bb6acc] w-[6vh] px-3 pb-1 absolute left-0 bottom-[2vh] ctitle-row1 overflow-visible">
+                  <h2 class="text-md font-bold text-white whitespace-nowrap">
+                    Tari Tor-Tor - <br />
+                    Batak
+                  </h2>
+                </div>
+              </div>
+              <div id="row2-card5" onclick="expandRow2Card('row2-card5')" class="card-small relative bg-gray-900 rounded-2xl shadow-md cursor-pointer h-[40vh] w-[25vh] transition-all">
+                <div class="absolute inset-0">
+                  <img src="img/tarian/jaipong.png" alt="" class="w-full h-full object-cover rounded-2xl brightness-50" />
+                </div>
+                <div class="absolute">
+                  <p class="hidden font-poppins text-white text-sm mx-4 mt-3">Tarian dinamis yang memadukan seni pencak silat dengan musik tradisional.</p>
+                </div>
+                <div class="bg-[#66bb6acc] w-[6vh] px-3 pb-1 absolute left-[1.5vh] bottom-[2vh] -rotate-90 ctitle-row1 overflow-visible">
+                  <h2 class="text-md font-bold text-white whitespace-nowrap">
+                    Tari Jaipong - <br />
+                    Jawa Barat
+                  </h2>
+                </div>
+              </div>
+              <div id="row2-card6" onclick="expandRow2Card('row2-card6')" class="card-small relative bg-gray-900 rounded-2xl shadow-md cursor-pointer h-[40vh] w-[25vh] transition-all">
+                <div class="absolute inset-0">
+                  <img src="img/tarian/gandrung.png" alt="" class="w-full h-full object-cover rounded-2xl brightness-50" />
+                </div>
+                <div class="absolute">
+                  <p class="hidden font-poppins text-white text-sm mx-4 mt-3">Tarian pemujaan yang kini menjadi simbol keramahtamahan Banyuwangi.</p>
+                </div>
+                <div class="bg-[#66bb6acc] w-[6vh] px-3 pb-1 absolute left-[1.5vh] bottom-[2vh] -rotate-90 ctitle-row1 overflow-visible">
+                  <h2 class="text-md font-bold text-white whitespace-nowrap">
+                    Tari Gandrung - <br />
+                    Banyuwangi
+                  </h2>
+                </div>
+              </div>
+              <div id="row2-card7" onclick="expandRow2Card('row2-card7')" class="card-small relative bg-gray-900 rounded-2xl shadow-md cursor-pointer h-[40vh] w-[25vh] transition-all">
+                <div class="absolute inset-0">
+                  <img src="img/tarian/cakalele.png" alt="" class="w-full h-full object-cover rounded-2xl brightness-50" />
+                </div>
+                <div class="absolute">
+                  <p class="hidden font-poppins text-white text-sm mx-4 mt-3">Tarian perang yang mencerminkan keberanian dan semangat juang masyarakat Maluku.</p>
+                </div>
+                <div class="bg-[#66bb6acc] w-[6vh] px-3 pb-1 absolute left-[1.5vh] bottom-[2vh] -rotate-90 ctitle-row1 overflow-visible">
+                  <h2 class="text-md font-bold text-white whitespace-nowrap">
+                    Tari Cakalele - <br />
+                    Maluku
+                  </h2>
+                </div>
+              </div>
+              <div id="row2-card8" onclick="expandRow2Card('row2-card8')" class="card-small relative bg-gray-900 rounded-2xl shadow-md cursor-pointer h-[40vh] w-[25vh] transition-all">
+                <div class="absolute inset-0">
+                  <img src="img/tarian/pakarena.png" alt="" class="w-full h-full object-cover rounded-2xl brightness-50" />
+                </div>
+                <div class="absolute">
+                  <p class="hidden font-poppins text-white text-sm mx-4 mt-3">Gerakan lembut yang melambangkan keharmonisan hidup.</p>
+                </div>
+                <div class="bg-[#66bb6acc] w-[6vh] px-3 pb-1 absolute left-[1.5vh] bottom-[2vh] -rotate-90 ctitle-row1 overflow-visible">
+                  <h2 class="text-md font-bold text-white whitespace-nowrap">
+                    Tari Pakarena - <br />
+                    Sulawesi Selatan
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Tarian Adat -->
+          <!-- Alat Musik -->
+          <div class="">
+            <div class="text-center pt-[4vh] text-xl font-poppins text-[#0a5900]">
+              <p class="">Alat Musik</p>
+            </div>
+            <div class="row-3 flex overflow-scroll gap-4 w-full justify-center mt-[8vh]">
+              <div id="row3-card1" onclick="expandRow3Card('row3-card1')" class="card-small relative bg-gray-900 rounded-2xl shadow-md cursor-pointer h-[40vh] w-[25vh] transition-all">
+                <div class="absolute inset-0">
+                  <img src="img/alat musik/gamelan.png" alt="" class="w-full h-full object-cover rounded-2xl brightness-50" />
+                </div>
+                <div class="absolute">
+                  <p class="hidden text-white font-poppins text-sm mx-4 mt-3">Alat musik yang harmonis, mencerminkan kedamaian dan kebijaksanaan budaya Jawa.</p>
+                </div>
+                <div class="bg-[#66bb6acc] w-[6vh] px-3 pb-1 absolute left-0 bottom-[2vh] -rotate-90 ctitle-row1 overflow-visible">
+                  <h2 class="text-lg font-bold text-white whitespace-nowrap">Gamelan - Jawa</h2>
+                </div>
+              </div>
+              <div id="row3-card2" onclick="expandRow3Card('row3-card2')" class="card-small relative bg-gray-900 rounded-2xl shadow-md cursor-pointer h-[40vh] w-[25vh] transition-all">
+                <div class="absolute inset-0">
+                  <img src="img/alat musik/angklung.png" alt="" class="w-full h-full object-cover rounded-2xl brightness-50" />
+                </div>
+                <div class="absolute">
+                  <p class="hidden font-poppins text-white text-sm mx-4 mt-3">Alat musik berbahan bambu yang melambangkan kerja sama dan keharmonisan.</p>
+                </div>
+                <div class="bg-[#66bb6acc] w-[6vh] px-3 pb-1 absolute left-0 bottom-[2vh] -rotate-90 ctitle-row1 overflow-visible">
+                  <h2 class="text-md font-bold text-white whitespace-nowrap">Angklung - Sunda</h2>
+                </div>
+              </div>
+              <div id="row3-card3" onclick="expandRow3Card('row3-card3')" class="card-small relative bg-gray-900 rounded-2xl shadow-md cursor-pointer h-[40vh] w-[25vh] transition-all">
+                <div class="absolute inset-0">
+                  <img src="img/alat musik/sasando.png" alt="" class="w-full h-full object-cover rounded-2xl brightness-50" />
+                </div>
+                <div class="absolute">
+                  <p class="hidden font-poppins text-white text-sm mx-4 mt-3">Alat musik petik berbentuk unik, menghasilkan melodi indah yang menenangkan.</p>
+                </div>
+                <div class="bg-[#66bb6acc] w-[6vh] px-3 pb-1 absolute left-0 bottom-[2vh] -rotate-90 ctitle-row1 overflow-visible">
+                  <h2 class="text-md font-bold text-white whitespace-nowrap">Sasando - NTT</h2>
+                </div>
+              </div>
+              <div id="row3-card4" onclick="expandRow3Card('row3-card4')" class="card-small relative bg-gray-900 rounded-2xl shadow-md cursor-pointer h-[40vh] w-[25vh] transition-all">
+                <div class="absolute inset-0">
+                  <img src="img/alat musik/kolintang.png" alt="" class="w-full h-full object-cover rounded-2xl brightness-50" />
+                </div>
+                <div class="absolute">
+                  <p class="hidden font-poppins text-white text-sm mx-4 mt-3">Alat musik tradisional Minahasa yang digunakan dalam upacara adat dan hiburan.</p>
+                </div>
+                <div class="bg-[#66bb6acc] w-[6vh] px-3 pb-1 absolute left-0 bottom-[2vh] -rotate-90 ctitle-row1 overflow-visible">
+                  <h2 class="text-md font-bold text-white whitespace-nowrap">Kolintang - Minahasa</h2>
+                </div>
+              </div>
+              <div id="row3-card5" onclick="expandRow3Card('row3-card5')" class="card-small relative bg-gray-900 rounded-2xl shadow-md cursor-pointer h-[40vh] w-[25vh] transition-all">
+                <div class="absolute inset-0">
+                  <img src="img/alat musik/tifa.png" alt="" class="w-full h-full object-cover rounded-2xl brightness-50" />
+                </div>
+                <div class="absolute">
+                  <p class="hidden font-poppins text-white text-sm mx-4 mt-3">Alat musik perkusi yang mengiringi tarian dan nyanyian adat.</p>
+                </div>
+                <div class="bg-[#66bb6acc] w-[6vh] px-3 pb-1 absolute left-0 bottom-[2vh] -rotate-90 ctitle-row1 overflow-visible">
+                  <h2 class="text-md font-bold text-white whitespace-nowrap">Tifa - Papua dan Maluku</h2>
+                </div>
+              </div>
+              <div id="row3-card6" onclick="expandRow3Card('row3-card6')" class="card-small relative bg-gray-900 rounded-2xl shadow-md cursor-pointer h-[40vh] w-[25vh] transition-all">
+                <div class="absolute inset-0">
+                  <img src="img/alat musik/kendang.png" alt="" class="w-full h-full object-cover rounded-2xl brightness-50" />
+                </div>
+                <div class="absolute">
+                  <p class="hidden font-poppins text-white text-sm mx-4 mt-3">Instrumen ritmis yang menjadi pengatur tempo dalam pertunjukan musik tradisional.</p>
+                </div>
+                <div class="bg-[#66bb6acc] w-[6vh] px-3 pb-1 absolute left-0 bottom-[2vh] -rotate-90 ctitle-row1 overflow-visible">
+                  <h2 class="text-md font-bold text-white whitespace-nowrap">Kendang - Sunda dan Jawa</h2>
+                </div>
+              </div>
+              <div id="row3-card7" onclick="expandRow3Card('row3-card7')" class="card-small relative bg-gray-900 rounded-2xl shadow-md cursor-pointer h-[40vh] w-[25vh] transition-all">
+                <div class="absolute inset-0">
+                  <img src="img/alat musik/arbab.png" alt="" class="w-full h-full object-cover rounded-2xl brightness-50" />
+                </div>
+                <div class="absolute">
+                  <p class="hidden font-poppins text-white text-sm mx-4 mt-3">Alat musik gesek tradisional yang sering digunakan dalam pertunjukan seni sastra Aceh.</p>
+                </div>
+                <div class="bg-[#66bb6acc] w-[6vh] px-3 pb-1 absolute left-0 bottom-[2vh] -rotate-90 ctitle-row1 overflow-visible">
+                  <h2 class="text-md font-bold text-white whitespace-nowrap">Arbab - Aceh</h2>
+                </div>
+              </div>
+              <div id="row3-card8" onclick="expandRow3Card('row3-card8')" class="card-small relative bg-gray-900 rounded-2xl shadow-md cursor-pointer h-[40vh] w-[60vh] transition-all">
+                <div class="absolute inset-0">
+                  <img src="img/alat musik/rebab.png" alt="" class="w-full h-full object-cover rounded-2xl brightness-50" />
+                </div>
+                <div class="absolute">
+                  <p class="font-poppins text-white text-sm mx-4 mt-3">Alat musik dawai yang memiliki suara melankolis, sering dimainkan dalam pertunjukan wayang.</p>
+                </div>
+                <div class="bg-[#66bb6acc] w-fit px-3 pb-1 absolute left-0 bottom-[2vh] ctitle-row1 overflow-visible">
+                  <h2 class="text-md font-bold text-white whitespace-nowrap">Rebab - Jawa</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-[#008906] w-full">
+        <div class="text-white">
+          <p class="text-center text-xl pt-20">Dipersembahkan Oleh:</p>
+          <div class="flex">
+            <div class="flex justify-center flex-col items-center">
+              <img src="./budaya/footer/logo.png" alt="" class="w-[40vh]" />
+              <div class="text-center">
+                <p class="font-sancreek text-2xl font-bold">Sam&Bud</p>
+                <p class="font-poppins text-xs">Samudra dan Budaya</p>
+              </div>
+            </div>
+            <div class="flex w-full justify-center space-x-4">
+              <a href="https://www.indonesia.travel/gb/en/home.html" target="_blank">
+                <img src="./budaya/footer/wi.png" alt="Wi Image" class="w-[50vh] h-[40vh] object-contain" />
+              </a>
+              <a href="https://indonesia.go.id/" target="_blank">
+                <img src="./budaya/footer/id.png" alt="ID Image" class="w-[50vh] h-[40vh] object-contain" />
+              </a>
+            </div>
+          </div>
+          <div class="flex justify-center items-center w-full">
+            <img src="./budaya/footer/fb.png" alt="" class="w-[10vh] h-[5vh] object-contain" />
+            <img src="./budaya/footer/x.png" alt="" class="w-[10vh] h-[5vh] object-contain" />
+            <img src="./budaya/footer/yt.png" alt="" class="w-[10vh] h-[5vh] object-contain" />
+            <img src="./budaya/footer/tt.png" alt="" class="w-[10vh] h-[5vh] object-contain" />
+          </div>
+          <div class="mt-16 pb-10">
+            <p class="text-center font-poppins text-xs">Copyright © Sam&Bud 2024</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="./dist/jquery.vmap.js"></script>
+    <script type="text/javascript" src="./dist/jquery.vmap.indonesia.js" charset="utf-8"></script>
+
+    <script>
+      function expandRow1Card(cardId) {
+        const allCards = document.querySelectorAll(".row-1 .card-small");
+
+        allCards.forEach((card) => {
+          const cardParagraph = card.querySelector("p");
+          const ctitle = card.querySelector(".ctitle-row1");
+
+          if (card.id === cardId) {
+            card.classList.remove("w-[25vh]");
+            card.classList.add("w-[60vh]");
+            cardParagraph.classList.remove("hidden");
+            ctitle.classList.remove("-rotate-90", "w-[6vh]", "left-0");
+            ctitle.classList.add("w-fit");
+          } else {
+            card.classList.remove("w-[60vh]");
+            card.classList.add("w-[25vh]");
+            cardParagraph.classList.add("hidden");
+            ctitle.classList.add("-rotate-90", "w-[6vh]", "left-0");
+            ctitle.classList.remove("w-fit");
+          }
+        });
+      }
+
+      function expandRow2Card(cardId) {
+        const allCards = document.querySelectorAll(".row-2 .card-small");
+
+        allCards.forEach((card) => {
+          const cardParagraph = card.querySelector("p");
+          const ctitle = card.querySelector(".ctitle-row1");
+
+          if (card.id === cardId) {
+            card.classList.remove("w-[25vh]");
+            card.classList.add("w-[60vh]");
+            cardParagraph.classList.remove("hidden");
+            ctitle.classList.remove("-rotate-90", "w-[6vh]", "left-[1.5vh]", "left-0");
+            ctitle.classList.add("w-fit");
+          } else {
+            card.classList.remove("w-[60vh]");
+            card.classList.add("w-[25vh]");
+            cardParagraph.classList.add("hidden");
+            ctitle.classList.add("-rotate-90", "w-[6vh]", "left-[1.5vh]", "left-0");
+            ctitle.classList.remove("w-fit");
+          }
+        });
+      }
+
+      function expandRow3Card(cardId) {
+        const allCards = document.querySelectorAll(".row-3 .card-small");
+
+        allCards.forEach((card) => {
+          const cardParagraph = card.querySelector("p");
+          const ctitle = card.querySelector(".ctitle-row1");
+
+          if (card.id === cardId) {
+            card.classList.remove("w-[25vh]");
+            card.classList.add("w-[60vh]");
+            cardParagraph.classList.remove("hidden");
+            ctitle.classList.remove("-rotate-90", "w-[6vh]", "left-0");
+            ctitle.classList.add("w-fit");
+          } else {
+            card.classList.remove("w-[60vh]");
+            card.classList.add("w-[25vh]");
+            cardParagraph.classList.add("hidden");
+            ctitle.classList.add("-rotate-90", "w-[6vh]", "left-0");
+            ctitle.classList.remove("w-fit");
+          }
+        });
+      }
+
+      function expandCard(cardId) {
+        const allCards = document.querySelectorAll(".card");
+
+        allCards.forEach((card) => {
+          const cardParagraph = card.querySelector("p");
+          const ctitle = card.querySelector(".ctitle"); // Get the ctitle for this specific card
+
+          if (card.id === cardId) {
+            // Expand the clicked card
+            card.classList.remove("w-[35vh]");
+            card.classList.add("w-[80vh]");
+            cardParagraph.classList.remove("hidden"); // Show content
+
+            // Update the position and style of the ctitle for the expanded card
+            ctitle.classList.remove("-rotate-90", "w-[12vh]");
+            ctitle.classList.add("w-fit");
+          } else {
+            // Collapse the other cards
+            card.classList.remove("w-[80vh]");
+            card.classList.add("w-[35vh]");
+            cardParagraph.classList.add("hidden"); // Hide content
+
+            // Reset the ctitle for the collapsed cards
+            ctitle.classList.add("-rotate-90", "w-[12vh]");
+            ctitle.classList.remove("w-fit");
+          }
+        });
+      }
+
+      window.onscroll = function () {
+        var navbar = document.getElementById("navbar");
+        var navc = document.getElementById("nav-child");
+        var logo = document.getElementById("logo");
+        if (window.scrollY > 550) {
+          navc.classList.add("text-black");
+          navc.classList.remove("text-white");
+          logo.classList.add("text-black");
+          logo.classList.remove("text-white");
+          navbar.classList.add("shadow-lg"); // Add white background and shadow
+          navbar.classList.remove("bg-transparent", "shadow-none"); // Remove transparency and shadow
+        } else {
+          navc.classList.remove("text-black");
+          navc.classList.add("text-white");
+          logo.classList.remove("text-black");
+          logo.classList.add("text-white");
+          navbar.classList.add("bg-transparent", "shadow-none"); // Add transparency and remove shadow
+          navbar.classList.remove("shadow-lg"); // Remove white background and shadow
+        }
+      };
+
+      jQuery(document).ready(function () {
+        const regionContent = {
+          path01: {
+            href: "./budaya/aceh/index.html",
+          },
+          path03: {
+            href: "./budaya/sumbar/index.html",
+          },
+          path04: {
+            href: "./budaya/riau/index.html",
+          },
+          path17: {
+            href: "./budaya/bali/index.html",
+          },
+          path19: {
+            href: "./budaya/ntt/index.html",
+          },
+          path27: {
+            href: "./budaya/sulsel/index.html",
+          },
+          path20: {
+            href: "./budaya/kalbar/index.html",
+          },
+          path33: {
+            href: "./budaya/papua/index.html",
+          },
+          path02: {
+            href: "./budaya/sumut/index.html",
+          },
+          path05: {
+            href: "./budaya/jambi/index.html",
+          },
+          path07: {
+            href: "./budaya/bengkulu/index.html",
+          },
+          path06: {
+            href: "./budaya/sumsel/index.html",
+          },
+          path08: {
+            href: "./budaya/lampung/index.html",
+          },
+          path14: {
+            href: "./budaya/banten/index.html",
+          },
+          path12: {
+            href: "./budaya/jabar/index.html",
+          },
+          path13: {
+            href: "./budaya/jateng/index.html",
+          },
+          path15: {
+            href: "./budaya/jatim/index.html",
+          },
+          path18: {
+            href: "./budaya/ntb/index.html",
+          },
+          path31: {
+            href: "./budaya/maluku/index.html",
+          },
+          path34: {
+            href: "./budaya/papuabarat/index.html",
+          },
+          path32: {
+            href: "./budaya/malukuutara/index.html",
+          },
+          path25: {
+            href: "./budaya/sulut/index.html",
+          },
+          path29: {
+            href: "./budaya/gorontalo/index.html",
+          },
+          path26: {
+            href: "./budaya/sulteng/index.html",
+          },
+          path30: {
+            href: "./budaya/sulbar/index.html",
+          },
+          path28: {
+            href: "./budaya/sultenggara/index.html",
+          },
+          path10: {
+            href: "./budaya/kepriau/index.html",
+          },
+          path09: {
+            href: "./budaya/kepbangka/index.html",
+          },
+          path23: {
+            href: "./budaya/kaltim/index.html",
+          },
+          path22: {
+            href: "./budaya/kalsel/index.html",
+          },
+          path21: {
+            href: "./budaya/kalteng/index.html",
+          },
+          path24: {
+            href: "./budaya/kalut/index.html",
+          },
+          path11: {
+            href: "./budaya/jakarta/index.html",
+          },
+          path16: {
+            href: "./budaya/jogja/index.html",
+          },
+          // Add more regions here with their respective hrefs
+        };
+
+        // Initialize vector map
+        jQuery("#vmap").vectorMap({
+          map: "indonesia_id",
+          selectedColor: null,
+          onRegionClick: function (event, code, region) {
+            event.preventDefault();
+
+            const content = regionContent[code];
+            if (content && content.href) {
+              // Redirect to the href specified in the data
+              window.location.href = content.href;
+            } else {
+              alert("No data available for this region.");
+            }
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
